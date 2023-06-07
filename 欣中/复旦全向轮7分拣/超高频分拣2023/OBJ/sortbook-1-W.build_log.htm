@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.86
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 z501304@live.cn, 1, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.16a
+Toolchain Path:  D:\Keil5\Keil5_C51\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 (build 20)
+Assembler:       Armasm.exe V5.06 (build 20)
+Linker/Locator:  ArmLink.exe V5.06 (build 20)
+Library Manager: ArmAr.exe V5.06 (build 20)
+Hex Converter:   FromElf.exe V5.06 (build 20)
+CPU DLL:         SARMCM3.DLL V5.16a
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.15.2
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+D:\阿法迪\欣中\复旦全向轮7分拣\超高频分拣2023\USER\USART.uvproj
+Project File Date:  05/30/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 (build 20)', folder: 'D:\Keil5\Keil5_C51\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_hd.s...
+compiling system_stm32f10x.c...
+compiling sys.c...
+compiling misc.c...
+compiling usart.c...
+compiling core_cm3.c...
+compiling main.c...
+main.c(135): warning:  #223-D: function "memset" declared implicitly
+          memset(RecvBuf,0,sizeof(RecvBuf));
+main.c(137): warning:  #223-D: function "memcpy" declared implicitly
+          memcpy(MidBuf,UHF+adder,UHFLen);
+main.c(151): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "uint8_t *"
+          USART1_SendData(MidBuf,UHFLen);
+main.c(183): warning:  #223-D: function "memset" declared implicitly
+      memset(RecvBuf,0,sizeof(RecvBuf));
+main.c(182): warning:  #177-D: variable "j" was declared but never referenced
+      u32 j;
+main.c(203): warning:  #223-D: function "memset" declared implicitly
+      memset(RecvBuf,0,sizeof(RecvBuf));
+main.c(239): warning:  #223-D: function "memcpy" declared implicitly
+                              memcpy(BookN,RecvBuf+13,12);
+main.c(351): warning:  #177-D: variable "i" was declared but never referenced
+      u8 i,j;
+main.c(351): warning:  #550-D: variable "j" was set but never used
+      u8 i,j;
+main.c(352): warning:  #177-D: variable "k" was declared but never referenced
+      u32  k;
+main.c(393): warning:  #223-D: function "GPIOS_Init" declared implicitly
+      GPIOS_Init(); /* Gpio set */
+main.c(422): warning:  #223-D: function "memset" declared implicitly
+              memset(BookN,0,12);
+main.c(436): warning:  #223-D: function "memcpy" declared implicitly
+                                  memcpy(BookN,RecvBuf+13,12);
+main.c(388): warning:  #177-D: variable "i" was declared but never referenced
+      u8 i,j,m;
+main.c(388): warning:  #177-D: variable "j" was declared but never referenced
+      u8 i,j,m;
+main.c: 15 warnings, 0 errors
+compiling stm32f10x_gpio.c...
+compiling led.c...
+compiling delay.c...
+compiling stm32f10x_it.c...
+compiling key.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+linking...
+Program Size: Code=6832 RO-data=336 RW-data=524 ZI-data=2244  
+FromELF: creating hex file...
+"..\OBJ\sortbook-1-W.axf" - 0 Error(s), 15 Warning(s).
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

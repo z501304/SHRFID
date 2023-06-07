@@ -1,0 +1,42 @@
+[Group]
+num=13
+g1 =Timer/Counter
+g2 =Basic Operation
+g3 =Special Operation
+g4 =Logic Operation
+g5 =Conver Operation
+g6 =Assignment Operation
+g7 =Shift Operation
+g8=Process Control
+g9=Motion Control
+g10=Motion Settings
+g11=System Instruction
+g12=Labelling Instruction
+g13=CAN Instruction
+[DriverPara]
+num=8
+List1=Num
+List2=Name
+List3=Property
+List4=Range
+List5=Current Value
+List6=Default Value
+List7=Unit
+List8=Data Type
+[MonitorData]
+mon1=Speed(RPM)
+mon2=Pos(PLS)
+[Monitor]//监视项=位数 说明
+num=12
+S0=1 What is the enabling state of the motor. (0-release state,1-enable state.)
+S1=1 What is the motor motion state.(0-Speed is zero,1-Speed is not zero.)
+S2=1 The motor looks for the zero switch state.(0-The zero switch is on,1-The zero switch is off.)
+S3=1 The motor looks for a way to return to zero.(0-Look for the zero switch,1-Find the Z zero position.)
+S4=1 Positive hard limit switch state. (0-Positive hard limit does not occur,1-Positive hard limit occurs.)
+S5=1 Negative hard limit switch state. (0-Negative hard limit does not occur,1-Negative hard limit occurs.)
+S6=1 Positive soft limit switch state. (0-Positive soft limit does not occur,1-Positive soft limit occurs.)
+S7=1 Negative soft limit switch state. (0-Negative soft limit does not occur,1-Negative soft limit occurs.)
+S8=1 Position arrival mark.(0-movement complete, 1-incomplete exercise.)
+S9=1 Position control mode flag.(0-absolute mode, 1-relative mode.)
+S10=1 Velocity direction indicator. (0-forward,1-negative)
+S11=1 Return to zero direction sign (0-positive,1-negative)

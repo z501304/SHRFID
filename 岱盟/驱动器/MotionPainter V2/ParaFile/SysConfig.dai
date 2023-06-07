@@ -1,0 +1,36 @@
+[SysPara]
+;C-жпнд,E-с╒нд
+Language=C
+bDriver=20100
+Version=1.1.0
+AutoDrawLine=1
+AutoConnect=1
+AutoConType=0
+MonitorTime=100 500
+PasterNote=1
+OWarrFlg=0
+
+iDataShow=0
+iDRange1=0
+iDRange2=100
+iOldStep=1
+[CommParameter]
+PortNo =S0
+BaudRate =2
+DataBit =0
+Parity =0
+StopBit =0
+StartAddr =1
+EndAddr =10
+
+CommunicateTime =100
+ComErrNum1 =2
+ComErrNum2 =3
+ComErrNum3 =100
+ReciveTime =10
+SendTime =0
+
+ConnectMode =0
+AutoBaud =0
+DetectRange =0
+ComParType=0

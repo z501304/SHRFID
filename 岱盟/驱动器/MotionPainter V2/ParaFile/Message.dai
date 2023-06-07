@@ -1,0 +1,757 @@
+[Base]
+NameC=MotionPainter 
+NameE=MotionPainter 
+
+Connect1C=未打开串口，请进行驱动器连接。
+Connect1E=The serial port is not open. Please connect the drive.
+
+Connect2C=驱动器连接产生错误，请重新进行驱动器连接。
+Connect2E=A drive connection error has occurred. Please reconnect the drive.
+
+Connect3C=虚拟端口或非法驱动器，请更换后重新连接。
+Connect3E=Virtual port or illegal drive, please replace and reconnect.
+
+Unit1C=主单元
+Unit1E=Main Unit
+
+Unit2C=子单元
+Unit2E=Sub Unit
+
+TransErr1C=查找程序错误，请联系软件开发商。
+TransErr1E=To find program errors, contact the software developer.
+
+TransErr2C=不能生成目标语言文件。
+TransErr2E=Cannot generate target language(obj) file.
+
+ErrorC=错误警告
+ErrorE=Error warning
+
+ErrtipC=错误提示
+ErrtipE=Error message
+
+OprtC=操作提示
+OprtE=Operation prompt
+
+OutrangeC=超出参数范围，请重新输入。
+OutrangeE=Out of parameter range,please input again.
+
+OkC=确定
+OkE=OK
+
+CancelC=取消
+CancelE=Cancel
+
+HelpC=帮助
+HelpE=Help
+
+ErrTxtC=输入错误，请重新输入。
+ErrTxtE=Input error,Please re-enter it.
+
+PasWd1C=密码输入错误，请重新输入。
+PasWd1E=Wrong password, please re-enter it.
+
+PasWd2C=密码三次输入错误无权限打开。
+PasWd2E=Password entered three times incorrectly without permission to open.
+
+PasWd3C=旧密码输入太长，不能超过24位，请重新输入。
+PasWd3E=The old password is too long to exceed 24 bits. Please re-enter it.
+
+PasWd4C=新密码输入太长，不能超过24位，请重新输入。
+PasWd4E=The new password is too long to exceed 24 bits. Please re-enter it.
+
+PasWd5C=确认密码输入太长，不能超过24位，请重新输入。
+PasWd5E=The confirm password is too long to exceed 24 bits. Please re-enter it.
+
+PasWd6C=新密码两次输入不一样，请重新输入。
+PasWd6E=The new password is not entered twice. Please re-enter it.
+
+PasWd7C=密码解析错误，不能加密仍使用原密码。
+PasWd7E=Password parsing error. Cannot encrypt using original password.
+
+PasWd8C=旧密码输入错误，请重新输入。
+PasWd8E=Old password entered incorrectly,Please re-enter it.
+
+PasWd9C=密码设置成功。
+PasWd9E=Password set successfully.
+[Main]
+Msg1C=无法识别的驱动器系列。
+Msg1E=Unrecognized series of drives.
+
+Msg2C=无法识别的驱动器型号。
+Msg2E=Unrecognized drive model.
+
+Msg3C=组件库文件内部参数错误,请重新安装软件。
+Msg3E=Bad internal parameters in the component library file. Please reinstall the software.
+
+Msg4C=参数文件1与参数文件2内参数号不相同请更换参数文件。
+Msg4E=The parameter number in parameter file 1 is different from that in parameter file 2. Please change the parameter file.
+
+Msg5C=关闭
+Msg5E=Close
+
+Msg6C=确认要关闭软件吗？
+Msg6E=Are you sure you want to turn off the software?
+
+Msg7C=驱动器配置文件错误，请重新安装软件。
+Msg7E=The drive configuration file is incorrect. Please reinstall the software.
+
+File1C=参数文件1错误,请重新安装软件。
+File1E=Parameter file1 wrong,please reinstall soft.
+
+File2C=参数文件2错误,请重新安装软件。
+File2E=Parameter file2 wrong,please reinstall soft.
+
+File3C=组件库文件错误,请重新安装软件。
+File3E=Component library file is wrong,please reinstall soft.
+
+File4C=打开文件错误,自动创建新文件。
+File4E=File opened is wrong,create new file.
+
+File5C=保存文件错误,自动创建新文件。
+File5E=File saved is wrong,create new file.
+
+File6C=监视数据文件不存在,请检查。
+File6E=The monitor data file does not exist, please check.
+
+File7C=保存监视数据文件不存在,创建新文件失败。
+File7E=Save monitor data file does not exist. Failed to create new file.
+
+File8C=是否恢复上次工程文件?
+File8E=Is the last project document restored?
+
+Create1C=工程管理器
+Create1E=Project manager
+
+Create2C=信息窗口
+Create2E=info window
+
+Create3C=绘图工具栏
+Create3E=Drawing toolbar
+
+Create4C=标准工具栏
+Create4E=Standard toolbar
+
+ResetC=设置完成后，重启软件生效。
+ResetE=After the Settings are completed, restart the software to take effect.
+
+ConnectC=未连接................
+ConnectE=No connect................
+
+DriverE1C=驱动器通信故障........
+DriverE1E=Driver communication failure........
+
+DriverE2C=驱动器传输故障........
+DriverE2E=Driver transmission failure........
+
+DriverE3C=****!!!!驱动器通信失败!!!!****
+DriverE3E=****!!!!Driver communication failure!!!!****.
+
+ConFile1C=V2.03版本以前的文件不能进行文件转换，请新建文件(
+ConFile1E=Files before V2.03 cannot be converted. Please create a new File(
+
+ConFile2C=)或连接(
+ConFile2E=) or connection (
+
+ConFile3C=)，再打开此文件保存后转换。
+ConFile3E=) , Open this file again,save it and convert it.
+
+ConFile4C=当前文件类型(
+ConFile4E=The current file type(
+
+ConFile5C=)与连接驱动器类型(
+ConFile5E=) and connected driver type (
+
+ConFile6C=)不同。是否使用当前文件类型(是-断开连接，否-新建文件)？
+ConFile6E=) is different. Do you use the current file type (Yes - disconnect, No - New file)? 
+
+ConFile7C=)与待打开文件类型(
+ConFile7E=) and file type to be opened (
+
+ConFile8C=)不同。是否使用当前文件类型(是-文件转换，否-替换文件)？
+ConFile8E=) is different.  Do you use the current file type (Yes - File conversion, No - Replacement file)? 
+
+ConFile9C=)与待粘贴数据类型(
+ConFile9E=) and data type to be pasted (
+
+ConFile10C=)不同。是否继续进行粘贴(是-数据转换，否-粘贴取消)？
+ConFile10E=) is different.  Do you want to continue (Yes - Data conversion, No - Paste cancel)? 
+
+ConFile11C=当前文件未保存，请保存后再执行本次操作。
+ConFile11E=The current file is not saved. Please save it and then perform this operation. 
+
+MonErr1C=警告!!!!!***连续通信异常次数超过%d次
+MonErr1E=warning!!!!!***Continuous communication abnormal times more than %d times
+
+MonErr2C=(最多100次)。
+MonErr2E=(up to 100 times).
+
+MonErr3C=(最多20次)。
+MonErr3E=(up to 20 times).
+
+[Comm]
+CommStatus1C=驱动器正常连接
+CommStatus1E=Driver is connected
+
+CommStatus2C=通讯口打开，但驱动器未连接
+CommStatus2E=Only Opened serial port
+
+CommStatus3C=通讯口关闭
+CommStatus3E=Serial port is closed
+
+[ParemeterDlg]
+File1C=参数备份文件
+File1E=Parameter backup  file.
+
+File2C=导入参数备份文件
+File2E=Load parameter backup  file.
+
+File3C=保存参数备份文件
+File3E=Save parameter backup  file.
+
+File4C=导入文件错误，请重新选择。
+File4E=Load file wrong,please reselect.
+
+File5C=写入文件错误，请重新执行。
+File5E=Write file wrong,please resume.
+
+[DriveStatusDlg]
+ItemC=名称 位数 当前值 注释
+ItemE=Name Bits CurVal Note
+
+[BreakPointDlg]
+ItemC=断点序号 单元名称 网络号
+ItemE=BreakNo UnitName NetNo
+
+[CommcatSetDlg]
+Msg1C=选择的端口不存在或被使用，请重新选择。
+Msg1E=The port you selected does not exist or is being used. Please reselect it.
+
+[ComponentMentDlg]
+ItemC=编号 注释 说明
+ItemE=No. Note Explain
+
+[DriveParameterDlg]
+Msg1C=参数%d描述:
+Msg1E=Parameter %d description:
+
+Msg2C=打开的文件不是当前驱动器参数文件，请更换。
+Msg2E=The open file is not the parameter file for the current drive. Please replace it.
+
+Msg3C=参数保存成功。
+Msg3E=Parameter saved successfully.
+
+Msg4C=是否恢复出厂设置？
+Msg4E=Whether to restore factory Settings?
+
+Msg5C=恢复出厂设置后是否保存？
+Msg5E=Whether to save after restoring factory Settings?
+
+[DriverRegDlg]
+Msg1C=打开的文件不是当前驱动器的寄存器参数文件，请更换。
+Msg1E=The open file is not the register parameter file for the current drive. Please replace it.
+
+Msg2C=打开的文件寄存器数量与当前驱动器的寄存器数量不同，是否使用文件内数量？
+Msg2E=The number of open file registers is different from the number of registers in the current drive.
+
+Msg3C=未找到相关寄存器类型。
+Msg3E=The associated register type was not found.
+
+ItemC=参数号 驱动值 文件值
+ItemE=ParaNo DrvVal FileVal
+
+[GuiSolExplorer]
+Item0C=命令 内容 名称 当前值
+Item0E=Command Content Name CurVal
+
+Item11C=梯形图 
+Item11E=Ladder Diagram
+
+Item12C=主程序区
+Item12E= Main Program Area
+
+Item13C=子程序区
+Item13E=Sub Program Area
+
+Item21C=PLC资源表
+Item21E=PLC Resource Table
+
+Item22C=PLC寄存器
+Item22E=PLC Register
+
+Item23C=驱动器资源表
+Item23E=Driver ResourceTable 
+
+Item24C=驱动器参数
+Item24E=Driver Parameter
+
+Item25C=驱动器状态
+Item25E=Driver Status 
+
+Item31C=注释管理
+Item31E=Annotation Management
+
+Item32C=单元注释
+Item32E=Unit Annotation
+
+Item33C=网络注释
+Item33E=Network Annotation
+
+Item34C=组件注释
+Item34E=Component Annotation 
+
+ExploreC=工程区 助记符 监视区
+ExploreE=ProjA Mnemon MoniA
+
+Msg1C=确定要删除
+Msg1E=Are you sure you want to delete 
+
+Msg2C=重命名主单元
+Msg2E=Rename the main unit
+
+Msg3C=重命名子单元
+Msg3E=Rename the sub unit
+
+[OutputList]
+CharC=行 列
+CharE= row column
+
+Item1C=欢迎使用Motec PLC软件
+Item1E=Welcome to use Motec PLC software
+
+Item2C=信息列表
+Item2E=Information List
+
+[RegisterDlg]
+Msg1C=编辑组件注释
+Msg1E=Edit Component Annotations
+
+Msg2C=接点未编辑。
+Msg2E=Contacts not edited.
+
+Msg3C=输入的接点值不符合条件，请重新输入。
+Msg3E=The input contact value does not meet the requirement. Please re-enter it.
+
+Msg4C=接点
+Msg4E=Contact
+
+[FunCmdPraDlg]
+Msg1C=未编辑，请填写。
+Msg1E= not edited, please fill in.
+
+Msg2C=参数不符合条件，请修改。
+Msg2E= The parameters do not meet the requirements. Please modify them.
+
+Msg3C="%s"使用了"%s"的32位高字地址。
+Msg3E="%s" uses the 32-bit high-character address of " %s".
+
+Msg4C=不符合参数规范，请修改。
+Msg4E=It does not conform to the parameter specification. Please amend it.
+
+[MemonicListDlg]
+Item0C=命令 内容 序号 内容
+Item0E=Command Content No. Content
+
+Msg1C=文件类型转换修正列表
+Msg1E=File Type Conversion Amendment List
+
+Msg2C=修改功能不能进行批量修改，请重新输入。
+Msg2E=Modification function can not be batch modified, please re-enter.
+
+[PLCView]
+IndicaRLC=行:%d,列:%d
+IndicaRLE=Row:%d,Col:%d
+
+Cell1C=当前行位置有"%s"指令，不能再添加其它任何指令。
+Cell1E=There is a "%s" instruction at the current line position, and no other instructions can be added.
+
+Cell2C=功能指令位置不能添加垂直线。
+Cell2E=Function instruction position cannot add vertical line.
+
+Cell3C=下一行为网络注释指令位置，不能添加垂直线。
+Cell3E=The next row is network annotation instruction position, cannot add the vertical line.
+
+Cell4C=下一行为功能指令位置，不能添加垂直线。
+Cell4E=The next row is function command position, cannot add vertical line.
+
+Cell5C=上一行相应位置有垂直线，不能添加当前指令。
+Cell5E=The previous row has a vertical line at the corresponding position. The current instruction cannot be added.
+
+Cell6C=当前所选功能指令不能在此添加。
+Cell6E=The currently selected function directive cannot be added here.
+
+Cell7C=当前所在行最后位置已存在指令不能插入。
+Cell7E=An instruction cannot be inserted because it already exists at the end of the current row.
+
+Cell8C=此位置不能插入或插入行组件已满，无法插入。
+Cell8E=This location cannot be inserted or the insert row component is full and cannot be inserted.
+
+Cell9C=当前所选指令，不能添加在最后位置（超过指令行数）。
+Cell9E=The currently selected instruction cannot be added at the last position (more than the number of instruction lines).
+
+Cell10C=当前所选指令，不能添加在最后一行位置。
+Cell10E=The currently selected instruction cannot be added at the last line position.
+
+Msg1C=目前是插入模式，无法插入功能指令和输出指令。
+Msg1E=Currently in insert mode, unable to insert function instructions and output instructions.
+
+Msg2C=当前网络已存在注释指令，不能再添加，只能修改。
+Msg2E=The current network has been annotated instruction, can not be added, can only be modified.
+
+Msg3C=网络%d
+Msg3E=Network %d
+
+Msg4C=警告!!!!!    连续通信异常次数超过%d次(最多100次)。
+Msg4E=Warning!!!!!    Continuous communication abnormal times more than %d times (up to 100 times).
+
+Msg5C=功能指令上方位置不能有垂直线，无法粘贴。
+Msg5E=Function instructions above the position can not have a vertical line, can not paste.
+
+Msg6C=粘贴数据含有网络注释组件，必须粘贴到网络首行位置。
+Msg6E=The paste data contains a network annotation component that must be pasted to the first row of the network。
+
+Msg7C=粘贴位置太靠下边，下边组件出界请重新粘贴。
+Msg7E=The paste position is too close to the bottom, please paste the bottom component again.
+
+Msg8C=粘贴位置太靠右边，右边组件出界请重新粘贴。
+Msg8E=The paste position is too close to the right, please paste the right component again.
+
+Msg9C=粘贴板内含有网络注释，但当前单元未显示网络注释，是否粘贴网络注释？
+Msg9E=The pasteboard contains network annotations, but the current unit does not display network annotations. Do you paste network annotations?
+
+Msg10C=粘贴数据文件类型异常。
+Msg10E=Paste data file type exception.
+
+Msg11C=粘贴选项
+Msg11E=Paste Options
+
+Msg12C=当前行以下有多个空行是否全部删除选否仅删除一行）。
+Msg12E=Multiple empty rows below the current row are not all deleted (Select delete only one row).
+
+Msg13C=当前行及以下无空行不能执行此操作。
+Msg13E=This operation cannot be performed if there is no blank row on the current row or below.
+
+Msg14C=错误 警告
+Msg14E=Error Warning
+
+Msg15C=指令%d参数超过范围请检查。
+Msg15E=Check that the %d parameter of the command exceeds the range.
+
+Msg16C=上一行相应位置有垂直线，不能添加当前指令。
+Msg16E=The previous row has a vertical line at the corresponding position. The current instruction cannot be added.
+
+Msg17C=当前行位置有功能指令，不能添网络注释指令。
+Msg17E=Current row position has function instruction, cannot add network annotation instruction.
+
+Msg18C=当前行位置9、10、11有指令，不能添加功能指令，请检查再添加。
+Msg18E=The current row positions 9, 10 and 11 have instructions, function instructions cannot be added, please check and add again.
+
+Msg19C=当前位置以下无待查组件。
+Msg19E=There are no pending components below the current location.
+
+Msg20C=最大深度超过%d,请重新规划。
+Msg20E=Max depth over %d, please reprogram.
+
+Msg21C=不能再添加行数，请联系软件开发商或缩小添加的行数目。
+Msg21E=No more rows can be added, please contact the software developer or reduce the number of rows added.
+
+Msg22C=可能梯形图绘制有错或元组件设置错误。请将文件保存关闭后重新打开能解决问题。若仍存在问题，请与开发商联系。
+Msg22E=The trapezoid diagram may have been drawn incorrectly, or the meta-component may have been set incorrectly. Please save the file and close it. If there are still problems, please contact the developer.
+
+Msg23C=主单元不能添加RETURN语句。
+Msg23E=The main cell cannot add a RETURN statement.
+
+Msg24C=子单元不能添加END语句。
+Msg24E=Subunits cannot add END statements.
+
+WarTxt1C=--警告：行%d与行%d有重复输出。
+WarTxt1E=--Warning: row %d and row %d have duplicate output.
+
+ErrTxt1C=--错误：行%d列%d功能指令不能找到库组件。
+ErrTxt1E=--Error: library component could not be found in row %d and column %d function instruction.
+
+ErrTxt2C=--错误：行%d列%d功能指令后必须有输出组件。
+ErrTxt2E=--Error: output component must be present after function instruction on row %d and column %d.
+
+ErrTxt3C=--错误：行%d列%d功能指令后不能有输出组件。
+ErrTxt3E=---Error: no output component after function instruction on row %d and column %d.
+
+ErrTxt4C=--错误：行%d列%d功能指令前一列只能为垂直线。
+ErrTxt4E=---Error: the previous column in row %d and column %d function instructions can only be a vertical line.
+
+ErrTxt5C=--错误：行%d列%d梯形图结构，不符合PLC梯形图规范。
+ErrTxt5E=---Error: row %d and column %d ladder structure, does not conform to the PLC ladder diagram specification.
+
+ErrTxt5-1C=--错误：行%d列%d水平断开，为孤立组件。
+ErrTxt5-1E=---Error: row %d and column %d is disconnected  horizontally  and is an orphaned component.
+
+ErrTxt6C=--错误：行%d列%d垂直断开，为孤立组件。
+ErrTxt6E=---Error: row %d and column %d is disconnected vertically and is an orphaned component.
+
+ErrTxt7C=--错误：行%d列%d断开，不能形成电路。
+ErrTxt7E=---Error: row %d and column %d is disconnected, cannot form circuit.
+
+ErrTxt8C=--错误：行%d总深度超过%d，超过软件限制数。
+ErrTxt8E=---Error: the total depth of row %d exceeds %d, exceeding the software limit.
+
+ErrTxt9C=--错误：行%d列%d到列%d不符合PLC梯形图规范。。
+ErrTxt9E=---Error:  row %d and column %d to column %d do not conform to the PLC ladder diagram specification 。。
+
+ErrTxt10C=--错误：行%d调用的子程序号不存在。。。
+ErrTxt10E=---Error:  the subroutine number invoked on row  %d does not exist。。。
+
+ErrTxt11C=--错误：行%d调用的跳转网络标号不存在。。。
+ErrTxt11E=---Error: the hop network label invoked on row  %d does not exist。。。
+
+ErrTxt12C=--错误：行%d调用的跳转到的%d，非主干网络。。。
+ErrTxt12E=---Error: jump to %d of row %d call, non-trunk network。。。
+
+ErrTxt13C=--错误：行%d列%d到列%d的功能指令前不能有输出分支。
+ErrTxt13E=---Error:  no output branch can precede functional instructions from row %d and column %d to column %d.
+
+ErrTxt14C=--错误：行%d列0到列%d功能指令前不能新的输出分支开始。
+ErrTxt14E=---Error: new output branch cannot start before function instruction from row %d and column 0 to column %d.
+
+ErrTxt15C=--错误：在行%d列0到列%d功能指令前，必须要有U或D接点。
+ErrTxt15E=---Error: before the row %d column 0 to column % d functional instruction, you must have U or D contacts.
+
+ErrTxt15-1C=--错误：在行%d列0到列%d功能指令前，必须要有A或B接点。
+ErrTxt15-1E=---Error: before the row %d column 0 to column % d functional instruction, you must have A or B contacts.
+
+ErrTxt16C=--错误：在行%d列0到列%d功能指令前，必须要有输入。
+ErrTxt16E=---Error: before the row %d column 0 to column % d functional instruction, you must have input.
+
+ErrTxt17C=--错误：在行%d列0到列%d功能指令前，
+ErrTxt17E=---Error: before the row %d column 0 to column % d functional instruction, 
+
+ErrTxt17-1C=前一行必须为A或B接点且不能多于一个。
+ErrTxt17-1E=the previous line must be A or B and not more than one.
+
+ErrTxt18C=--错误：行%d列%d参数不对。 应该为(
+ErrTxt18E=--Error: the row %d and column %d parameter is incorrect. It should be (
+
+ErrTxt19C=--错误：行%d列%d输入功能指令前输出分支必须在同一列。
+ErrTxt19E=--Error: the output branch before the input function instruction in row %d and column %d must be in the same column.
+
+ErrTxt20C=--错误：行%d列%d输入功能指令前输出结束分支下不能再有分支。
+ErrTxt20E=--Error: no more branches under the output end branch before the input function instruction in  row %d and column %d.
+
+ErrTxt21C=--错误：行%d列%d到第%d列短路。
+ErrTxt21E=--Error: it is short-circuited from row %d and column 0 to column %d.
+
+ErrTxt22C=--错误：行%d网络输出分支不能超过%d个。。
+ErrTxt22E=--Error: row %d network output branch cannot exceed %d。。
+
+[PainterDoc]
+Open1C=工程文件
+Open1E=Project File
+
+Open2C=打开工程文件
+Open2E=Open Project File
+
+Open3C=非工程文件或文件格式有问题，打开失败。
+Open3E=There is a problem with the non-project file or file format.
+
+SaveC=PLC程序已更改，是否要保存？
+SaveE=The PLC program has been changed. Do you want to save it?
+
+Save2C=保存工程文件
+Save2E=Save Project File
+
+Msg1C=选择的文件类型%s与已连接的驱动器类型%s不一致。是否使用新文件类型？
+Msg1E=The file type %s selected is inconsistent with the connected drive type %s. Do you want to use a new file type?
+
+Msg2C=是否进行脱机操作？
+Msg2E=Are you offline?
+
+Msg3C=无法连接驱动器，请检查连线及通信设置。
+Msg3E=Unable to connect the drive, please check the connection and communication settings.
+
+Msg4C=脱机 联机
+Msg4E=Offline Online
+
+[PainterView]
+Msg1C=驱动器通信故障，监视/调试过程自动退出。
+Msg1E=Driver communication failure, monitoring/debugging process automatically exits.
+
+Msg2C=调试中写数据错误
+Msg2E=Write data error in debugging
+
+Msg3C=请先停止PLC运行，再执行关闭软件操作。
+Msg3E=Please stop the PLC operation before performing the software shutdown operation.
+
+Msg4C=不能切换到非相关程序单元。
+Msg4E=Cannot switch to an unrelated program unit.
+
+Msg5C=打开的文件格式不正确，请选择正确的驱动器类型。
+Msg5E=The file you opened is not in the correct format. Please select the correct drive type.
+
+Msg6C=读取文件数据错误，请更换文件或升级软件。
+Msg6E=Error reading file data. Please replace the file or upgrade the software.
+
+Msg7C=打开的文件格式不正确，请更换文件或升级软件。
+Msg7E=The file format is not correct, please change the file or upgrade the software.
+
+Msg8C=读取文件数据错误，请更换文件或升级软件。
+Msg8E=Error reading file data. Please replace the file or upgrade the software.
+
+Msg9C=插入 覆盖
+Msg9E=Ins Ovr
+
+SmTxt1C=编译开始中 。。。。。。
+SmTxt1E=Compilation is starting 。。。。。。
+
+SmTxt2C=代码文件: %s指令不识别 。。。。。。
+SmTxt2E=Code file: %s instruction not recognized 。。。。。。
+
+SmTxt3C=代码文件: %s参数%d行读取错误 。。。
+SmTxt3E=Code file: %s instruction not recognized 。。。
+
+SmTxt4C=代码文件: %s翻译错误 。。。
+SmTxt4E=Code file: %s translation error 。。。
+
+SmTxt5C=指令总长度为%d，编译完成。。。。。。%s 。。。。。。
+SmTxt5E=The total length of instructions is% d, compiled 。。。。。。% s 。。。。。。
+
+SmTxt6C=语法检查中。。。。。。
+SmTxt6E=In grammar checking 。。。。。。
+
+SmTxt7C=语法检查完成。。。。。。
+SmTxt7E=Completion of grammar checking 。。。。。。
+
+SmTxt8C=梯形图程序有错误，无法完成编译，请修改。
+SmTxt8E=Trapezoidal diagram program error, unable to complete the compilation, please modify.
+
+SmTxt9C=沿操作超限，如需扩展请联系软件开发商。
+SmTxt9E=Along with the operation limit, if you need to expand, please contact the software developer.
+
+SmTxt10C=!!!!!!!!!****无数据不能下载****!!!!!!!!!!!!!!!
+SmTxt10E=!!!!!!!!!****No data can be downloaded****!!!!!!!!!!!!!!!
+
+SmTxt11C=程序行超过驱动器内存限制，请减少代码行或联系厂家。
+SmTxt11E=Program lines exceed the drive memory limit. Please reduce the code lines or contact the manufacturer.
+
+SmTxt12C=下载数据准备中。。。。
+SmTxt12E=Download data is in preparation 。。。。
+
+SmTxt13C=下载数据准备校验错误。。。。
+SmTxt13E=Download the data to prepare for validation errors 。。。。
+
+SmTxt14C=下载数据开始。。。。。。
+SmTxt14E=Download data to start 。。。。
+
+SmTxt15C=传输开始帧校验错误，无法下载程序。
+SmTxt15E=Transmission start frame check error, unable to download the program.
+
+SmTxt16C=传输数据错误，无法下载程序。
+SmTxt16E=Transmission data error, unable to download the program.
+
+SmTxt17C=下载数据进行中，完成%%%d。。。。。。
+SmTxt17E=Download data is in progress, completed %%%d。。。。。。
+
+SmTxt18C=下载数据正在校验中。。。。。。
+SmTxt18E=Download data is in validation。。。。。。
+
+SmTxt19C=下载数据错误：  校验出错，请检查程序并重新下载。
+SmTxt19E=Download Data Error: Error checking, please check the program and download again.
+
+SmTxt20C=!!!!下载数据完成。。。。。。。。
+SmTxt20E=!!!!Download data completed。。。。。。
+
+SmTxt21C=调试中退出指令错误。。。。
+SmTxt21E=Error in debugging exit instruction。。。。
+
+[RegisterDlg]
+ItemC=编号 类型 数值(H) 数值(D) 注释 说明
+ItemE=No. Type Value(H) Value(D) Note Explain
+
+Msg1C=驱动器连接错误，无法更改数值。
+Msg1E=Drive connection error, cannot change value.
+
+Msg2C=最后一个D寄存器无法为32位数或浮点数，自动更改为16位数。
+Msg2E=The last D register cannot be a 32-digit or floating-point number and is automatically changed to a 16-digit number.
+
+Msg3C=数据值输入非法或超范围，请重新输入。
+Msg3E=Data values entered illegally or out of range, Please re-enter.
+
+Msg4C=寄存器范围必须>=0。
+Msg4E=Register range must be >=0.
+
+Msg5C=寄存器范围2必须>寄存器范围1。
+Msg5E=Register range 2 must be > Register range 1.
+
+Progrm1C=程序单元名称
+Progrm1E=Program Unit Name
+
+Progrm2C= 程序单元注释
+Progrm2E=Program Unit Note
+
+[GloalFun]
+Msg1C=读取文件%s错误,请检查文件完整性。
+Msg1E=Error reading file %s, Please check file integrity.
+
+Msg2C=写入文件%s错误,请检查文件是否被占用。
+Msg2E=Error writing file %s, Please check if the file is occupied.
+
+Msg3C=PLC参数格式不正确，请重新设置。
+Msg3E=PLC parameter format is incorrect, please reset.
+
+Msg4C=PLC参数范围不正确，请重新设置。
+Msg4E=PLC parameter range is incorrect, please reset.
+
+Msg5C=注释类型数超过最大值，请重新安装软件。
+Msg5E=The number of comment types exceeds the maximum, please reinstall the software.
+
+Msg6C=寄存器%s%d超出当前范围%d，请修改。
+Msg6E=Register %s%d is out of the current range %d, please modify.
+
+Msg7C=%s功能指令不同，请修改。
+Msg7E=%s function instructions are different, please modify.
+
+Msg8C=%s寄存器类型(%c)不存在，请修改。
+Msg8E=%s register type (% c) does not exist, please modify.
+
+[ComFun]
+ComE1C=文件ID验证错误，请更换系统文件。
+ComE1E=File ID validation error, please replace the system file.
+
+ComE2C=驱动器型号验证错误，请更换系统文件。
+ComE2E=Driver model validation error, please replace system files.
+
+ComE3C=CRC校验错误，请排除干扰，重新传输。
+ComE3E=CRC check error, please remove interference and retransmit.
+
+ComE4C=程序存储错误，驱动器可能发生问题。
+ComE4E=Program storage error, drive may have problems.
+
+ComE5C=整体程序CRC校验错误，请重新传输。
+ComE5E=The whole program CRC check error, please retransmit.
+
+ComE6C=接收数据错误。
+ComE6E=Error receiving data.
+
+ComE7C=数据验证错误。
+ComE7E=Data validation error.
+
+ComE8C=数据校验错误。
+ComE8E=Data check error.
+
+ComE9C=通信错误，请重新断开后连接。
+ComE9E=Communication error. Please disconnect the connection again.
+
+ComE10C=下载失败。
+ComE10E=Download failed.
+
+ComE11C=ID验证错误。
+ComE11E=ID validation error.
+
+ComE12C=下载密码校验错误。
+ComE12E=Failed to download password check error.
+
+ComE13C=下载数据校验错误。
+ComE13E=Download data validation error.
+
+ComE14C=未知通信错误。
+ComE14E=Unknown communication error.
+
+ComE16C=下载失败。
+ComE16E=.

@@ -1,0 +1,26 @@
+[Registr]
+num=10
+//代号，数量，地址(H),全名
+r0 =X 80 1000 X 
+r1 =Y 80 2000 Y
+r2 =R 2048 3000 R
+r3 =S 256 4000 S
+r4 =T 32 5000 T
+r5 =C 32 6000 C
+r6 =D 512 9000 D
+r7 =P 350 0 P
+r8 =L 32 7000 TLD
+r9 =J 32 8000 CLD
+[MonitorData]
+num=2
+str1=X:0~31(Xm~Xn) Y:0~31(Ym~Yn) R:0~2047(Rm~Rn) S:0~254(Sm~Sn) T:0~31(Tm~Tn) C:0~31(Cm~Cn)
+str2=D:0~512(Dm~Dn) P:0~350(Pm~Pn) TLD:0~31(TLDm~TLDn) CLD:0~31(CLDm~CLDn)
+mon=2
+mon1=175 1
+mon2=172 2
+[Option]
+MaxEdge=1600
+Time154=5000
+[IO]
+InNum=12
+OtNum=6

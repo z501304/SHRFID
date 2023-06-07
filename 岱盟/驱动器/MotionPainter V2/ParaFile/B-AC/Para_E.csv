@@ -1,0 +1,725 @@
+No.,Name,Function Description,Parameter Group
+0,Drive type,"101XX£ºTwo-phase intelligent stepper drive
+201XX£ºThree-phase intelligent stepper drive
+301XX£ºCoreless DC servo drive
+401XX£ºDC servo drive
+501XX£ºBeta version AC servo drive",Driver settings
+1,"Drive serial number 
+High bits","High 16 bits of drive serial number, together with low 16 bits to form a 32 bits number, which is the unique identification number of the drive",Driver settings
+2,"Drive serial number
+Low bits","Low 16 bits of drive serial number, together with high 16 bits to form a 32 bits number, which is the unique identification number of the drive",Driver settings
+3,Software version of the drive,"Software version of the drive, e.g.30201, Version 3.02.01",Driver settings
+4,Drive rated voltage,Drive rated voltage,Driver settings
+5,Drive rated current,Drive rated current,Driver settings
+6,Current sampling full-scale current  ,Current sampling full-scale current  ,Driver settings
+7,Hardware version number of the drive,"Hardware version of the drive, e.g.30201, Version3.02.01",Driver settings
+8,Panasonic motor type,"Panasonic motor type:0-GCGM,others-GIU",Driver settings
+9,Communication checksum method,"0: CRC checksum.Other  values: XOR checksum; Any modification please restart drive to apply. If used for MODBUS communication, need to set this parameter to XOR.",Driver settings
+10,Built-in PLC function ON/OFF,0: PLC function OFF; 1: PLC function ON,Driver settings
+11,Drive address,Drive address.Please restart to apply after modification.,Driver settings
+12,RS232/RS485/USB communication baud rate,"RS232/RS485/USB communication baud rate
+0-9600bps;
+1-19200bps;
+2-38400bps;
+3-57600bps;
+4-115200bps;
+Restart to apply after any modification",Driver settings
+13,CAN communication baud rate,"CAN bus communication baud rate
+0-50kbps;
+1-125kbps;
+2-250kbps;
+3-500kbps;
+4-800kbps;
+5-1Mbps;
+Restart to apply after any modification",Driver settings
+14,U-phase current offset limit,"U-phase current offset, if actual offset   exceeds the limit when drive starts, the drive will report current offset fault.",Driver settings
+15,V-phase current offset limit,"V-phase current offset, if actual offset   exceeds the limit when drive starts, the drive will report current offset fault.",Driver settings
+16,Reserved,Reserved,Reserved
+17,Define a input as enable signal in network mode,"If this   is set to 9999,an input can be defined as signal for motor enable and release command in network operation mode, otherwise the function is invalid in network operation mode;",Control Parameter
+18,Brake operation,"In case brake on and motor enable are not linked, it is used to operate the brake, 0: brake to be released; 1: the brake to be activated",Control Parameter
+19,Reserved,Reserved,Reserved
+20,Reserved,Reserved,Reserved
+21,Reserved,Reserved,Reserved
+22,Reserved,Reserved,Reserved
+23,Rated power,"Rated power of the drive, only as a display setting, does not affect any control and function",Driver settings
+24,Reserved,Reserved,Reserved
+25,Motor feedback type,"Motor feedback type£º
+0-Incremental encoder;
+1-Digital Hall£»
+2-Resolver;
+3-4-Wires encoder;
+4-Tamakawa's 17-bit encoder;
+5-HEIDENHAIN EnData2.2 encoder;
+6-Renishaw Biss encoder;
+7-SSI encoder£»
+",Driver settings
+26,"Encoder count per revolution, high bits","High bit of encoder counts per revolution, together with lowe bits it makes a 32 bits   for encoder resolution",Driver settings
+27,"Encoder count per revolution, lowe  bits","Low bit of encoder counts per revolution, together with high bits it makes a 32 bits   for encoder resolution",Driver settings
+28,Motor pole pairs,"Motor electromagnetic pole pairs (4 represents 4 electrode pairs, ie 8 poles)",Driver settings
+29,Motor Ke  ,Motor back electromotive force constant (Not valid in current version),Driver settings
+30,Motor resistance  ,Motor phase resistance (Not valid in current version),Driver settings
+31,Motor inductance  ,Motor phase inductance (Not valid in current version),Driver settings
+32,Reserved,Reserved,Reserved
+33,Reserved,Reserved,Reserved
+34,Reserved,Reserved,Reserved
+35,Stop Motion,"Stop motion. If set to 1 then the motor will stop, and then the   will automatically change to 0;",Control Parameter
+36,Operating mode,"Drive operating mode:
+0-Network command mode;
+1-Pulse/direction mode;
+2-Analog signal mode£»
+3-PWM mode£»
+PLC function is available in all modes",Control Parameter
+37,Control mode,"Drive control mode:
+0-Current control mode;
+1-Speed control mode£»
+2-Position control mode£»",Control Parameter
+38,High 16-bit of motor point-to-point motion distance,Moving distance  . high 16 bits.,Position mode
+39,Low 16-bit of motor point-to-point motion distance,Moving distance  . low 16 bits.,Position mode
+40,Motor Enable | Release Enable,"Motor enable:
+0-Release Motor£»
+1-Enable Motor£»",Control Parameter
+41,Start motion in position mode,"Set to 1 motor to perform the point-to-point motion command under position mode in the network operation mode, and then  the   automatically changes to 0;",Control Parameter
+42,Emergency stop mode,"Mode of emergency stop :
+0-Motor to stop immediately after receiving emergency stop command, ie there is no deceleration;
+1-Motor decelerates to a stop according to a preset deceleration  ;
+2-Motor Mreleased after receiving the emergency stop command;
+Note: If there is finding limit(low limit or high limi), homing, finding Z pulse etc. during operation, the stop mode must be set to 0 or 1, otherwise the motor action will be abnormal.",Velocity profile generating profile
+43,Start|Stop finding limit,"Start or stop finding limit motion:
+Change from 1 to 0 -  motor stop motion immediately;
+Change from 0 to 1  - motor starts finding limit;",Control Parameter
+44,Motor emergency stop,"Emergency stop command, set to 1 motorwill stop immediately, and the parameter automatically changes to 0;",Control Parameter
+45,Position control mode,"Point-to-point motion mode in network operation mode:
+0-Relative move, position calculated from the current position;
+1-Absolute move, position calcuated from position 0 (home) as starting point;",Control Parameter
+46,Motion completion flag,"Motion Completion Flag Control:
+0- Motion Completion flag disabled.
+1- Motion Completion flag enabled. When motion reached motion completion area (Pr. 48) and set time Pr. 50 (stabilization time) elapsed, motion completion flag will be set to 1 (the   of bit 0 of Pr. 199 is in line with this parameter);", statuss
+47,Near completion flag,"Near completion flag:
+0- Near completion flag disabled.
+1- When position reaches the near completion area (Pr. 49),near completion flag will be set to 1 (the   of bit 1 of Pr. 199 is consistent with this one);", statuss
+48,Completion area,"The completion area is used to define the area where under network control point-to-point motion is completed. When completion flag setting is 1 & when motor motion position reaches the completion area & the set time (Pr. 50) is elapesd, Motion Completed Flag will be set to 1;",Control Parameter
+49,Near completion area,This parameter is used to define the area where it is considered as the motion is near completion.,Control Parameter
+50,Motion Complete settling time,"When the position reaches the completion area and a specific time (this parameter) is elapsed (stablized£©, motion completion flag will be set to 1",Control Parameter
+51,Motor position clear,"Set 1 to clear encoder  , and then this parameter will change to 0 automatically",Control Parameter
+52,Clear drive alarm ,"Set 1 to clear drive alarm, and then this paramter will change to 0 automatically",Control Parameter
+53,Save parameters to flash,"Set 1 to save parameters to drive flash and then this parameter will change to 0 automatically; the process of saving parameters to Flash will cause a short-time interruption of communication, which is normal;",Control Parameter
+54,Start|Stop looking for Z pulse,"Start|Stop looking for Z pulse;
+Falling edge (ie 1 to 0 jump) - Stop looking for Z pulse;
+Rising edge (ie 0 to 1 jump) - Start looking for Z pulse;",Homing
+55,Start|Stop positive jog,"Positive jog control:
+Falling edge (ie 1 to 0 jump) - Stop positive jog ;
+Rising edge (ie 0 to 1 jump) - Start positive jog ",Control Parameter
+56,Start|Stop negative jog,"Negative jog control£º
+Falling edge (ie 1 to 0 transition) - Stop the negative jog;
+Rising edge (ie 0 to 1 transition) - start a negative jog;",Control Parameter
+57,Current offset,"Current offset   will be directly added to the set   of the current controlloop; it is valid in the position control and speed control mode, and is invalid in the current control mode;",Current mode
+58,Brake-Enable Link,"0-Brake and motor enable are not linked;
+1-Motor brake and the motor enable is linked,ie brake to automatically released when motor is enabled, and brake will automatically ON  when motor is released.",Control Parameter
+59,Brake type,"Brake type£º
+0-Brake ON when the power is off;
+1-Brake ON when the power is on;",Control Parameter
+60,Brake delay time,"Whenmotor is in static, a delay time can be set to the brake before it goes off after motor is enabled & before it goes on after motor is released.",Control Parameter
+61,Start brake maximum speed,"The speed limit of motor where brake can be set to ON. If motor speed is over this speed, cannot set brake on.",Control Parameter
+62,Speed observation filter 1,"Speed observer filter 1, the larger the  , the greater the filtering effect (acceleration and deceleration motion);",Control Parameter
+63,Speed observation filter 2,"Speed observer filter 2, the larger the  , the greater the filtering effect (constant speed  motion);",Control Parameter
+64,Speed observation filter 3,"Speed observer filter 3, the larger  , the greater the filtering effect (to be used when speed setting   is 0);",Control Parameter
+65,Data record enable flag,"0-Data record is invalid;
+1-Enable data logging; T/S curve point-to-point motion to be recorded in data logging",data record
+66,Maximum speed under current control mode,"Maximum high speed limit undr current control mode, valid when Pr. 288 parameter (current control mode) is set to 0.",Current mode
+67,Current set   smoothing filter,"This filter is used to smooth current changing process under current control mode. Increase   of this parameter will smooth the current changing process but with high delay to reach target current.On the contrary, decrease this   will make current reaches target   quicker but less smooth process. This parameter is valie under position control mode or speed control mode. If set to 0, the function is invalid.",Current mode
+68,Start Homing,"Falling edge (ie 1 to 0 Jump) - the motor stop homing;
+Rising edge (ie 0 to 1 Jump) - the motor start homing;",Homing
+69,Brake output,"Define which ouput to be brake control output
+0-not defined;
+1-Output No. 1 is used as brake output;
+2-Output No. 2 is used as brake output;
+And so on. if defined output port does not exist (depends on model of drive) it will be invalid.
+In the case a drive has a dedicated brake control output , if this   is set to 0, the dedicated brake output port will be valid,if this parametr is set to a   other than 0, the dedicated brake output will be invalid, and the set output will be used as brake control output.",Input Output
+70,Motor release to brake start delay time,"This parameter is to define the time delay before braking after motor is realeased.For more detailed information, please refer to the description of the brake logic;",Control Parameter
+71,Brake state,"0-Brake is off;
+1-Brake is on;", statuss
+72,"Single turn absolute position, high 16 bits","Signle-turn absolute encoder position   (high 16 bits), to form a 32bits unsigned number together with low 16bits",Position mode
+73,"Single turn absolute position, low 16 bits","Signle-turn absolute encoder position   (low 16 bits), to form a 32bits unsigned number together with high 16bits",Position mode
+74,Maximum Motor Enable Speed,"If actual speed of motor is high than this parameter, motor cannot be enabled",Control Parameter
+75,Reserved,Reserved,Reserved
+76,Drive initialization completed flag,0-drive initialization not completed; 1-drive initialization completed;, statuss
+77,Emergency stop deceleration,"Emergency stop deceleration  , valid when Pr. 42 is 1 (ie, the emergency stop to be done with deceleration)",Velocity profile generating profile
+78,S(T) curve maximum speed,Maximum speed   in S-curve or T-curve velocity profile generating,Velocity profile generating profile
+79,S curve maximum acceleration,Maximum acceleration   in S-curve velocity profile generating,Velocity profile generating profile
+80,S curve maximum jerk,Maximum jerk   in S-curve trajectory planning,Velocity profile generating profile
+81,Jog speed,Positive and negative jog speed  ,Control Parameter
+82,Homing Speed,"Homing speed, symbol of the   represents directions",Homing
+83,T curve acceleration,Acceleration   of T-curve velocity profile generating,Velocity profile generating profile
+84,T curve deceleration,Deceleration   of T-curve velocity profile generating,Velocity profile generating profile
+85,Reserved,Reserved,Reserved
+86,Continuous T-curve maximum reversal speed,"Under T curve continuous motion, the maximum speed that motor is allowed to change motion direction. When actual speed of motor is greater than this parameter and motor needs to change motion direction, motor will decelerates till speed is same or below this parameter (set speed), and then motor will change motion direction.The larger the  , it is more sensitive when motor needs to change direction of motion, but motor vibration will be greater when changing direction.The smaller the  , it will be less sensitive and more smoothy when motor changes direction.",Velocity profile generating profile
+87,Velocity Profile Generating Mode,"0-T curve;
+1-S curve;
+2-PVT;
+3-PT;",Velocity profile generating profile
+88,Deceleration for Stop,Deceleration   when motor stops motion,Velocity profile generating profile
+89,Speed of finding Z pulse,"Speed of finding Z pulse, the symbol represents the direction of motion;",Homing
+90,Reserved,Reserved,Reserved
+91,The low 16 bits of alarm history,Alarm history since last power-on, statuss
+92,The upper 16 bits of alarm history,Alarm history since last power-on,Driver settings
+93,Pulse Control mode,"Select pulse input signal type under pulse control mode, restart drive to apply modification
+0-Orthogonal pulse signal;
+1-Pulse/Direction signal(pulse rising edge count)
+2-Pulse/direction mode (pulse falling edge count);",Pulse mode
+94,Electronic gear molecule,"The electronic gear molecule (n), together with the electronic gear denominator (m), constitutes the electronic gear ratio undr pulse control mode.n/m means that when controller sends m pulses to drive, motor will move n encoder pulses; if the  s of Pr. 348 and Pr. 349 are defined, as long as one of Pr. 348 and Pr. 349 is not Zero, the number of pulses per revolution under the pulse control mode is the number of pulses per revolution defined by Pr. 348 and Pr. 349, at the same time electronic gear ratio setting is invalid.If both Pr. 348 and Pr. 349 are zero, and Pr. 94, numerator of the electronic gear is 0, the number of pulses per revolution under pulse control mode is Pr. 95, the   of the electronic gear denominator;",Pulse mode
+95,Electronic gear denominator,"The electronic gear denominator (m), together with the electronic gear molecule (n) , constitutes the electronic gear ratio undr pulse control mode.n/m means that when controller sends m pulses to drive, motor will move n encoder pulses; if the  s of Pr. 348 and Pr. 349 are defined, as long as one of Pr. 348 and Pr. 349 is not Zero, the number of pulses per revolution under the pulse control mode is the number of pulses per revolution defined by Pr. 348 and Pr. 349, at the same time electronic gear ratio setting is invalid.If both Pr. 348 and Pr. 349 are zero, and Pr. 94, numerator of the electronic gear is 0, the number of pulses per revolution under pulse control mode is Pr. 95, the   of the electronic gear denominator;",Pulse mode
+96,Reserved,Reserved,Pulse mode
+97,Reserved,Reserved,Pulse mode
+98,Pulse input smoothing filter,"Pulse/direction pulse input signal smoothing filter(0~999) , 0 means invalid",Pulse mode
+99,Clear input pulses,Clear input pulse and position error.Set 1 to execute and then the   returns to 0 automatically.,Pulse mode
+100,Motion motion direction,"Motor motion direction definition in pulse or analog control mode, zero or non-zero means two opposite directions",Pulse mode
+101,Pulse counting mode under pulse control mode,"1-rising edge counting, 0- falling edge counting. Restart drive to apply any change.",Pulse mode
+102,Reserved,Reserved,Reserved
+103,Reserved,Reserved,Reserved
+104,Reserved,Reserved,Reserved
+105,Analog input filter,"Analog input signal smoothing filter, the larger the  , the better the smoothing filtering effect. But larger smoothing filter factor(this parameter) will results less sensitive in terms of system responding performance;",Analog mode
+106,Analog signal dead zone,Analog input signal will be considered 0 if actual   is less than this paramter;,Analog mode
+107,Analog input 1 offset  ,"Analog input 1 offset  , to offset zero drift of analog input signal",Analog mode
+108,Analog mode maximum current,"To define maximum current under current control mode with analog input, ie max current corresponds to signal +10V ",Analog mode
+109,Analog mode maximum speed,"To define maximum speed under speed control mode with analog input, ie max speed corresponds to signal +10V ",Analog mode
+110,Analog mode maximum position High 16 bits,"To define maximum position under position control mode with analog input, ie max position corresponds to signal +10V  - high 16 bits",Analog mode
+111,Analog mode maximum position Low 16 bits,"To define maximum position under position control mode with analog input, ie max position corresponds to signal +10V  - low 16 bits",Analog mode
+112,Analog input 2 offset  ,"Analog input 2 offset  , to offset the zero drift of the analog input signal;",Analog mode
+113,Reserved,Reserved,Reserved
+114,Reserved,Reserved,Reserved
+115,Reserved,Reserved,Reserved
+116,Reserved,Reserved,Reserved
+117,Reserved,Reserved,Reserved
+118,Control gain switching mode,"Control gain switching mode:
+0-Mode 1: Using the first set of control gains, the gain switching mode is a strategy using an anti-disturbance zone and an anti-disturbance factor;
+1-Mode 2: When speed is less than zero speed threshold set by Pr. 289, the second group of control gains will apply, otherwise the first set of control gains will apply;
+2-Mode 3: The usage and switching of control gains is determined by Pr. 129 and to be switched by users in real time;",Control gain
+119,Current loop proportional gain,"Current control loop proportional gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+120,Current loop integral gain,"Current control loop integral gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+121,Position loop proportional gain,"Position control loop proportional gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+122,Position loop integral gain,"Position control loop integral gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+123,Speed loop proportional gain,"Speed control loop proportional gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+124,Speed loop integral gain,"Speed control loop integral gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+125,Speed feed forward gain,"Speed feed forward gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+126,Acceleration feed forward gain,"Acceleration feedforward gain, range 0~10000, the greater the  , the stronger the control",Control gain
+127,Control gain switching smoothing filter,"Filter to be used during gain switching process between different gain groups to ensure no abnormal motor vibration during the process.Range 0~10000, the greater the  , the stronger the control (slow switching). Small   will make the switching process quicker but less smooth. 0 Means filter not valid.",Control gain
+128,Position loop integral retention,"Integral control mode in position mode:
+0: No position integral during MOTION, and integral is only involved when set speed is zero;
+1: Integral active during whole process",Control gain
+129,Gain usage  statuss,"Control gain 1, 2, 3 group in use",Control gain
+130,Current loop proportional gain,"The second current loop proportional gain, ranging from 0 to 10000, the greater the  , the stronger the control effect",Control gain
+131,Current loop integral gain,"Second current loop integral gain, range 0~10000, the greater the  , the stronger the control effect",Control gain
+132,Second Position loop proportional gain ,"Second position loop proportional gain, ranging from 0 to 10000, the larger the  , the stronger the control effect",Control gain
+133,Second Position loop integral gain,"Second position loop integral gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+134,Second speed loop proportional gain,"Second speed loop proportional gain, ranging from 0 to 10000, the greater the  , the stronger the control effect",Control gain
+135,Second speed loop integral gain,"Second speed loop integral gain, range 0~10000, the larger the  , the stronger the control effect",Control gain
+136,Second speed feed forward gain,"Second speed feedforward gain ranges from 0 to 10000. The larger the  , the stronger the control effect.",Control gain
+137,Second Acceleration feed forward gain,"Second acceleration feedforward gain ranges from 0 to 10000. The larger the  , the stronger the control effect.",Control gain
+138,Third current loop proportional gain,"Third current loop proportional gain, ranging from 0 to 10000, the greater the  , the stronger the control effect",Control gain
+139,Third Current loop integral gain,"Third current loop integral gain, ranging from 0 to 10000, the greater the  , the stronger the control effect",Control gain
+140,Third position loop proportional gain,"Third position loop proportional gain, ranging from 0 to 10000, the larger the  , the stronger the control effect",Control gain
+141,Third position loop integral gain,"Third position loop integral gain, the range is 0~10000, the larger the  , the stronger the control effect",Control gain
+142,Tird speed loop proportional gain,"Third speed loop proportional gain, ranging from 0 to 10000, the larger the  , the stronger the control effect",Control gain
+143,Third speed loop integral gain,"Third speed loop integral gain, ranging from 0 to 10000, the greater the  , the stronger the control effect",Control gain
+144,Third Speed feed forward gain,"Third speed feedforward gain ranges from 0 to 10000. The larger the  , the stronger the control effect.",Control gain
+145,Third Acceleration feed forward gain,"Third acceleration feedforward gain ranges from 0 to 10000. The larger the  , the stronger the control effect.",Control gain
+146,Anti-jitter factor,"When actual position of the motor is within anti-jitter area, all control parameters are multiplied by the anti-jitter factor.The unit is 0.1, that is, 1 means 0.1, and 10 means 1.0 etc.",Control gain
+147,Anti-jitter area,"To define a area centring on the target position. When acutual position is within this area, all control gains will be multiplied by factor as defined by Pr.146",Control gain
+148,Reserved,Reserved,Reserved
+149,Register (flag type only) output,"TO define output in correspoding with a specific reigster.. The level of the output is determined by Pr. 150, and the corresponding register number is determined by Pr.151", statuss
+150,Register output signal level,Register output signal level, statuss
+151,Register number related to Pr.149,Register number related to Pr.149 , statuss
+152,Reserved,Reserved,Reserved
+153,Maximum position error duration,"The maximum allowed position error time (duration), if the maximum position error continues and exceed the set time(this parameter), position error alarm will be generated;",Position mode
+154,Maximum speed error range,"Maximum speed error range, if acutal speed error exceede this  , speed error alarm will be generated",Speed mode
+155,Reserved,Reserved,Reserved
+156,Reserved,Reserved,Reserved
+157,Reserved,Reserved,Reserved
+158,Speed setting,"Speed setting in control loop (not target speed as per Pr.174, target speed under speed control mode is determined by Pr. 174)",Speed mode
+159,Z pulse found flag,To be set to 1 when Z pulse is found and it will change to 0 automatically when motor start motion.,Homing
+160,Motor motion  statuss,"Motor motion  statuss:
+0-When motor speed is less than zero speed threshold set by Pr. 289;
+1-When motor speed is greater than zero speed threshold set by Pr. 289;", statuss
+161,D-axis current actual,D-axis current actual  ,Current mode
+162,Q axis current actual,Q axis current actual  ,Current mode
+163,D axis current setting,D axis current setting,Current mode
+164,Q axis current setting,Q axis current setting,Current mode
+165,Motor U phase current,Motor U phase current,Current mode
+166,Motor V phase current,Motor V phase current,Current mode
+167,Alpha phase current,Alpha phase current,Current mode
+168,Beta phase current,Beta phase current,Current mode
+169,Hall signal  statuss,Hall signal  statuss from encoder, statuss
+170,Position setting   16 bits high (Bit16-Bit31),High 16 bits of position set   ,Position mode
+171,Position setting   16 bits low (Bit0-Bit15),Low 16 bits of position set  ,Position mode
+172,Actual position   16 bits high (Bit16-Bit31),High 16 bits of actual position,Position mode
+173,Actual position   16 bits low (Bit0-Bit15),Low 16 bits of actual position,Position mode
+174,Target speed,Target speed in speed control mode,Speed mode
+175,Actual speed,Actual speed,Speed mode
+176,Position error  ,Actual position error,Position mode
+177,Speed error  ,Actual speed error,Speed mode
+178,Q axis current error  ,Current Q-axis current error,Current mode
+179,Target current  ,Current setpoint in current control mode,Current mode
+180,D-axis current error  ,Current D-axis current error,Current mode
+181,Current target achieved  ,"When actual current   reached this  and set time elapsed, torque arrival flag will be set.",Speed mode
+182,Speed achieved  ,"When actual speed  reached this speed  and set time elapsed, speed achieved flag will be set.",Speed mode
+183,Data record channel 1 content,"Data record channel 1 record content:
+0-not defined;
+1-Position setting  ;
+2-Actual position  £»
+3-speed setting;
+4-actual speed;
+5-d axis current setting  ;
+6-d axis actual current;
+7-q axis current setting  ;
+8-q axis current actual  ;
+9-alpha axis current;
+10-beta axis current;
+11-motor U phase current;
+12-motor V phase current;
+13-position error;
+14-speed error;
+15-q axis current error;
+16-d axis current error;
+17-analog input 1#;
+18-reserved;
+19-I2t actual   (displayed as percentage of set  ,  0 to 10000 means 0% to 100%);",data record
+184,Data record channel 2 content,"Data record channel 2 record content:
+3-not defined;
+4-Position setting  ;
+5-Actual position  £»
+3-set speed;
+4-actual speed;
+5-d axis current setting;
+6-d axis actual current;
+7-q axis current setting;
+8-q axis actual current;
+9-alpha axis current;
+10-beta axis current;
+11-motor U phase current;
+12-motor V phase current;
+13-position error;
+14-speed error;
+15-q axis current error;
+16-d axis current error;
+17-analog input 1#;
+18-reserved;
+19-I2t actual   (displayed as a percentage of set  , the   0 to 10000 means 0% to 100%);",data record
+185,Data record channel 3 content,"Data record channel3 record content:
+6-not defined;
+7-Position setting  ;
+8-Actual position  £»
+3-set speed;
+4-actual speed;
+5-d axis current setting  ;
+6-d axis current actual  d;
+7-q axis current setting  ;
+8-q axis current actual  ;
+9-alpha axis current;
+10-beta axis current;
+11-motor U phase current;
+12-motor V phase current;
+13-position error;
+14-speed error;
+15-q axis current error;
+16-d axis current error;
+17-analog input 1#;
+18-reserved;
+19-I2t actual   (displayed as a percentage of set  , the   0 to 10000 means 0% to 100%);",data record
+186,Data record channel 4 content,"Data record channel 4 record content:
+9-not defined;
+10-Position setting;
+11-Actual position;
+3-set speed;
+4-actual speed;
+5-d axis current setting;
+6-d axis actual current;
+7-q axis current setting;
+8-q axis acutal current;
+9-alpha axis current;
+10-beta axis current;
+11-motor U phase current;
+12-motor V phase current;
+13-position error;
+14-speed error;
+15-q axis current error;
+16-d axis current error;
+17-analog input 1#;
+18-reserved;
+19-I2t actual   (displayed as a percentage of set  , the   0 to 10000 means 0% to 100%);",data record
+187,Data record sampling time,"Data recording sampling time, multiply by 0.1ms to get sampling time;",data record
+188,Data record completion flag,"Data record completion flag:
+0-Data recording not completed;
+1-Data recoding completed;",data record
+189,Torque reached window,"Torque reached window is a area around set torque . If current setting is Iset and the window is Iwin, the torque arrival window will be [Iset-Iwin, Iset+Iwin].",Current mode
+190,Speed reached window,"Speed reached window is a area around speed setting  . If speed setting  is Vset and the window is set to Vwin, the speed arrival window is [Vset-Vwin, Vset+Vwin].",Speed mode
+191,Position arrival window,"Position arrival window is a area position setting. If position setting is Pset and the window is set to Pwin, the position arrival window will be [Pset-Pwin, Pset+Pwin].",Position mode
+192,Torque reached flag,"Under current control mode, when actual current is within the torque arrival window and set time elapsed, torque reached flag will be set to 1, otherwise 0;",Current mode
+193,Speed reached flag,"Under speed control mode, speed reached flag will be set to 1 after acutal speed is within speed reached window and set time elapsed, otherwise 0;",Speed mode
+194,Position arrival flag,"Under position control mode, when actual position is within position reached window and set time elapsed, position arrival flag will be set to 1, otherwise 0;",Position mode
+195,Power module current temperature,Power module current temperature (0-200 C), statuss
+196,Current motor temperature,Current motor temperature   (reserved), statuss
+197,Digital input  statuss,"Digital input  statuss:
+Bit0 - the  status of input port 1;
+Bit1 - the  status of input port 2;
+Bit2 - the  status of input port 3;
+Bit3 - the  status of input port 4;
+Bit4 - the  status of input port 5;
+Bit5 - the  status of input port 6;
+Bit6 - the  status of input port 7;
+Bit7 - the  status of input port 8;
+Bit8 - the  status of input port 9;
+Bit9 - the  status of the input port 10;
+Bit10 - the  status of the input port 11;
+Bit11 - the  status of the input port 12;
+Note: The number of input of different drive is not same, please refer to specific drive manual;
+
+0-Photocoupler is OFF;
+1-Photocoupler is ON;", statuss
+198,Digital output  statuss,"Digital output  statuss:
+Bit0 - the  status of output port 1;
+Bit1 - the  status of output port 2;
+Bit2 - the  status of output port 3;
+Bit3 - the  status of output port 4;
+Bit4 - the  status of the output port 5;
+Bit5 - the  status of the output port 6;
+Note: The number of output different drive is different, please refer to specific drive manual;
+
+0-Photocoupler is OFF;
+1-Photocoupler is ON;
+It can also be used to set the  statuss of the output port;", statuss
+199, statuss flag,"Bit0 - Completion flag
+Bit1 - Near completion flag
+Bit2 - Positive limit flag
+Bit3 - Negative limit flag
+Bit4 - Z pulse found flag
+Bit5 - Data recording completion flag
+Bit6 - Motor enabled flag
+Bit7 - Alarm
+0 indicates not triggerd; 1 indicates triggered.", statuss
+200,Drive alarm information 1,"Drive alarm information £¨0X0000 indicates no alarm):
+bit0-FAULT_SYSTEM_ERROR,  System failed
+bit1-FAULT_STARTUP_INCOMPLETE, Drive startup failed
+bit2-FAULT_PARAMETER_ERROR, Parameter fault
+bit3-FAULT_UNDER_VOLTAGE, Undervoltage alarm
+bit4-FAULT_OVER_VOLTAGE,  Overvoltage alarm
+bit5-FAULT_I2T_ERROR,  I2t alarm
+bit6-WARNING_PEAKCURRENT_ARRIVED, Peak current warning
+bit7-FAULT_POSITION_FOLLOWING_ERROR, Position error alarm
+bit8-FAULT_ENCODER,  Encoder alarm
+bit9-FAULT_VELOCITY_FOLLOWING_ERROR, Speed error alarm
+bit10-WARNING_IPM_TEMPERATURE, Power module temperature warning
+bit11-FAULT_IPM_TEMPERATURE, Power module temperature alarm
+bit12-FAULT_STO_ACTIVE, STO activated alarm
+bit13-FAULT_FLASH_ERROR,  Flash failure
+bit14-FAULT_CURRENT_OFFSET, Current error fault
+bit15-WARNING_MOTOR_DISABLE,  Motor is not enabled, only used as a flag bit. ", statuss
+201,Drive alarm information 2,"Drive alarm information£¨If displayed   is 0x0000, there is no alarm.£©:
+bit0-FAULT_IPM, power module IPM failure
+bit1-FAULT_OVERVELOCITY, motor speed exceeds maximum speed
+bit2-FAULT_LACKPHASE, power supply missing fault (reserved)
+bit3-FAULT_MOTOR_TEMPERATURE, motor temperature alarm (reserved)
+bit4-WARNING_I2T, I2t warning
+bit5-WARNING_LIMIT_CW, limit warning
+bit6-WARNING_LIMIT_CCWD, limit warning
+bit7-FAULT_DISCHARGE_TIMEOUT, discharge timeout alarm
+bit8-WARNING_MOTOR_TEMPERATURE, motor temperature warning
+bit9-FAULT_ENCODER_INI, four-wire communication encoder initialization alarm
+bit10-WARNING_ENCODER_OVERSPEED, four-wire encoder overspeed alarm
+bit11-WARNING_ENCODER_BATTERY, four-wire communication encoder battery voltage alarm
+bit12-FAULT_ENCODER_CRC, four-wire communication encoder CRC check error
+bit13-FAULT_CANOPEN_LIFEGUARD_ERROR, CANOPEN lifeguard function alarm
+bit14-FAULT_PVT_CRCFAILED, PVT data CRC check error
+Bit15-reserved
+", statuss
+202,Data collection data length,"Data record length of data record function, maximum   is 2000;",data record
+203,Variables corresponding to data recording trigger condition,"Variables used to trigger data recording function, 0 to 19 respectively represent the variables defined in the data recording channel;",data record
+204,Data record trigger level,Data logging function trigger level,data record
+205,Data logging trigger mode,"Data record trigger mode:
+0-Falling edge to trigger;
+1-Rising edge to trigger;",data record
+206,Data record position variable factor,"Factor of data recording function(position).
+Position = actual position ¡Á Pr. 206 / number of pulse per revolution (motor)",data record
+207,Speed Reached Window time,"When speed is within speed reached window and set time(this parameter) elapsed, speed reached flag will be set.",Speed mode
+208,Clear pulse count error input,Clear pulse count error input,Pulse mode
+209,Continuous protection current,"The continuous protection current   used in the drive I2t protection (In a real application, current protection of I2t is the samller one  out of the Pr. 209 and Pr. 5)",Protection
+210,Maximum speed limit,"The maximum speed limit of the motor. When motor speed exceeds this value , drive will generate an alarm. If set this parameter to 0, this function will  be invalid, ie no alarm will be generated when speed limit is reached.",Current mode
+211,Peak current limit,"Peak current of the drive, the maximum value  of the setting of motor current. When motor is overloaded, this is the max current that motor will get from drive.",Protection
+212,I2T current time limit,Time limit of I2T. Refer to algorithm in drive manual;,Protection
+213,Protection mode selection Fusing_Limit,"Current protection mode selection (this function is currently not valid):
+0- Motor release protection mode, when motor current reaches I2T protection limit, motor will be released, thus protecting motor and drive from overheating;
+1- Motor current limit protection mode, when motor current reaches I2T protection limit, motor will not be released, but motor current will be limited to set continuous current to protect motor and drive from overheating; ",Protection
+214,Hardware positive limit activation,"
+0-Hardware positive limit not activated;
+1-Hardware positive limit activated;",Protection
+215,Hardware negative limit activation,"
+0-Hardware megative limit not activated;
+1-Hardware negative limit activated;",Protection
+216,"Software high limit, high 16 bits","Software high limit, high 16 bits",Protection
+217,Software high limit low 16 bits,Software high limit low 16 bits,Protection
+218,"Software low limit, high 16 bits","Software low limit, high 16 bits",Protection
+219,"Software low limit, low 16 bits","Software low limit, low 16 bits",Protection
+220,Software high limit activated|not activated,"0-Software high limit not activated;
+1-Software high limit activated;",Protection
+221,Software low limit activated|not activated,"0-Software low limit not activated;
+1-Software low limit activated;",Protection
+222,Actual Bus Voltage ,Actua Bus voltage of drive, statuss
+223,Motor temperature alarm threshold,Motor will be releasd when motor temperature is high than this parameter (reserved),Protection
+224,IPM temperature alarm threshold,"When the current protection mode Pr.213 is ¡°Motor release protection mode¡±, and IPM temperature reaches set alarm threshold (this Parameter), drive will generate an alarm but motor will not be released;
+When the current protection mode Pr.213 is ¡°Motor current limit protection mode¡±, and IPM temperature reaches the set threshold(this parameter), motor will not be released and motor current will be limited to continuous current set  . When IPM temperature drops below the protection limit, motor current will be allowed to increase till temperature protection is triggered again.",Protection
+225,IPM temperature failure threshold,"IPM temperature failure threshold, when IPM temperature reaches this threshold, motor will be realeased for protection regardless of whether the protection mode is set to ""Motor release protection mode"" or ""Motor current limit protection mode"".",Protection
+226,Maximum positiona error,"Maximum position error. Under position control, if position error  exceeds the set maximum position error (this parameter) and set time elapsed, the drive will generate an alarm and motor will be released.If maximum position error is set to 0, drive will ignore position error.",Position mode
+227,Maximum speed error,"The maximum speed deviation of the speed error alarm. During speed control, if actua speed error exceeds the set maximum speed deviation(this parameter) and exceeds the set time, drive will generate an alarm and the motor will be released.If the maximum speed deviation is set to 0, drive will ignore speed error.",Speed mode
+228,Motor temperature failure threshold,Motor temperature alarm threshold (reserved function),Protection
+229,Pulse count error clear trigger,Pulse count error clear trigger ,Reserved
+230,Stop motion function input,"Define the number of input for stop motion:
+0-Not defined;
+1-Input 1 is used for STOP MOTION;
+2-Input 2 is used for STOP MOTION;
+And so on;",Input Output
+231,Stop motion level,"0-Low level to trigger Stop motion;
+1-High level to trigger Stop motion;",Input Output
+232,Emergency stop function input,"Define the number of input as emergency stop switches:
+0-Not defined;
+1-Input 1 is used for Emergency Stop;
+2-Input  is used for Emergency Stop;
+And so on",Input Output
+233,Emergency stop trigger level,"0-Low level to trigger Emergency Stop;
+1-High level to trigger Emergency Stop;",Input Output
+234,Home switch trigger level,"0-Home switch output is Low level;
+1-Home switch output is High level;",Input Output
+235,Home switch input definition,"Define the number of input for home switch:
+0-Not defined;
+1-Input 1 for home switch;
+2-Input 2 for home switch;
+And so on;",Input Output
+236,Servo ready function output ,"Define the number of output for servo ready signal
+0-Not defined;
+1-Output 1 for Servo Ready;
+2-Output 2 for Servo Ready;
+And so on",Input Output
+237,Motor enable function input,"0-Not defined;
+1-Input1 for motor enable input;
+2-Input2 for motor enable input;
+And so on",Input Output
+238,Clear fault function input,"0-Not defined;
+1-Input1 for clear fault input;
+2-Input2 for clear fault input;
+And so on",Input Output
+239,Positive limit input,"0-Not defined;
+1-Input1 for positive limit input;
+2-Input2 for positive limit input;
+And so on",Input Output
+240,Negative limit input,"0-Not defined;
+1-Input1 for negatve limit input;
+2-Input2 for negative limit input;
+And so on",Input Output
+241,Positive jog input,"0-Not defined;
+1-Input1 for positive jog input;
+2-Input2 for positive jog input;
+And so on",Input Output
+242,Negative jog input,"0-Not defined;
+1-Input1 for negative jog input;
+2-Input2 for negative jog input;
+And so on",Input Output
+243,Start Homing Input,"0-Not defined;
+1-Input1 for start homing input;
+2-Input2 for start homing input;
+And so on",Input Output
+244,Analog input,"Define the number of analog input for the analog control function:
+0-Not defined;
+1-Input1 for analog input under analog control mode;
+2-Input2 for analog input under analog control mode;",Input Output
+245,Pulse inhibit input,"0-Not defined;
+1-Input1 for pulse inhibit input;
+2-Input2 for pulse inhibit input;
+And so on",Input Output
+246,Fault output ,"Define the output for fault output:
+0-Not defined;
+1-Output1 for fault signal output;
+2-Output1 for fault signal output;
+And so on",Input Output
+247,Position Reached output,"Define the output for position arrival output under position control mode:
+0-Not defined;
+1-Output1 for position arrival output signal;
+2-Output2 for position arrival output signal;
+And so on",Input Output
+248,Speed reached function output definition,"Define the number of output for speed reached output under speed control mode:
+0-Not defined;
+1-Output1 for speed reached signal;
+2-Output2 for speed reached signal;
+And so on",Input Output
+249,Torque reached output,"Define the number of output for torque raeched under current control mode:
+0-Not defined;
+1-Output1 for torque reached signal;
+2-Output2 for torque reached signal;
+And so on",Input Output
+250,Zero speed clamp input,"Define the number of input for zero speed clamp function:
+0-Not defined;
+1-Input1 is used as a zero speed clamp input;
+2-Input2 is used as a zero speed clamp input;
+And so on",Input Output
+251,Servo ready trigger level,"0-Low level enable;
+1-High level enable;",Input Output
+252,Motor enable trigger level,"0-Low level enable;
+1-High level enable;",Input Output
+253,Clear fault trigger level,"0-Low level clear fault information;
+1-High level clear fault information;",Input Output
+254,Positive limit trigger level,"Input port positive limit function trigger level:
+0-low level triggers the positive limit;
+1-High level triggers positive limit;",Input Output
+255,Negative limit trigger level,"0-Low level triggers negative limit;
+1-High level triggers negative limit;£»",Input Output
+256,Positive jog trigger level,"0-Low level starts forward jog;
+1-High level starts positive jog;",Input Output
+257,Negative jog trigger level,"The input port activates the negative jog trigger level:
+0-low level initiates negative jog;
+1-High level initiates negative jog;",Input Output
+258,Start homing trigger level,"
+0-low level starts to return to zero;
+1-High level starts to return to zero;",Input Output
+259,Pulse inhibit trigger level,"
+0-low level starts to activate;
+1-High level starts to activate;",Input Output
+260,Zero speed clamp trigger level,"
+0-low level starts to activate;
+1-High level starts to activate;",Input Output
+261,Fault output trigger level,"
+0-Low level output;
+1-High level output;",Input Output
+262,Position arrival trigger level,"
+0-Low level output;
+1-High level output;",Input Output
+263,Speed arrival trigger level,"
+0-Low level output;
+1-High level output;",Input Output
+264,Torque arrival trigger level,"
+0-Low level output;
+1-High level output;",Input Output
+265,Analog input 1  ,Analog input 1  ,Input Output
+266,Analog input 2  ,Analog input 2  ,Input Output
+267,Analog output 1  ,Analog output 1  ,Input Output
+268,Analog output 2  ,Analog output 2  ,Input Output
+269,Reserved,Reserved,Reserved
+270,Location arrival window set time,"Set time for position arrival window. After position is within the window and set time(this parameter) elapsed, it will  be considered position arrival completed.",Position mode
+271,Current reaches window set time,"Set time for current reached window. After current is within the window(a range around target current) and set time(this parameter) elapsed, it will  be considered as current reached completed..",Current mode
+272,Direction setting input under Analog control,"Define the number of input for direction control input under analog control mode:
+0-Not defined;
+1-Input1 as direction control input under analog control mode;
+2-Input2 as direction control input under analog control mode;
+And so on",Input Output
+273,Direction setting input tigger level under Analog control,"0-Low level to activate;
+1-High level to activate;",Analog mode
+274,LifeGuard time,"Unit of lifeguard time is ms. If  0, indicating no lifeguard function; Only valid under MOTECAN protocol or MODBUS protocol in RS232/Rs485/CAN network.",Protection
+275,Reserved,Reserved,Reserved
+276,LifeGuard enable,Set to 9999 to activate lifeGuard function,Protection
+277,Zero speed flag output,"Define the number one output for zero speed flag output:
+0-Not defined;
+1-Output1 as zero speed flag output;
+2-Output2 as zero speed flag output;
+And so on",Input Output
+278,Zero speed flag output level,"0-Low level to indicate zero speed flag;
+1-high level tp indicate zero speed flag;",Input Output
+279,Z pulse numbers to be find in homing process,The number of pulses to be find during homing process.,Homing
+280,Stablization time duration(gap) in homing process,"During homing process there are different stages ie find home switch, offset, finding pulse etc. This paramter define a stablization time between each stage.",Homing
+281,Homing offset high 16 bits,Homing offet high 16 bits. The 32 bits number includes +/- information. Please refer to MOTEC manual,Homing
+282,Homing offet low 16 bits,Homing offet low 16 bits. The 32 bits number includes +/- information. Please refer to MOTEC manual,Homing
+283,Homing  status flag,"0: Homing failed or homing in process or homing is not performed; 
+1: Homing successful;",Homing
+284,Reserved,Reserved,Reserved
+285,Reserved,Reserved,Reserved
+286,Reserved,Reserved,Reserved
+287,Reserved,Reserved,Reserved
+288,Current mode control strategy,"Control Strategy:
+0-Max speed limit;
+1-No speed limit, current set changes step by step;
+2-No speed limit, current set changes slowly according to set filter;
+3-Check current loop response according to current loop cycle",Current mode
+289,Zero speed threshold,"When actual speed is below this threshold, speed zero flag will be set;",Speed mode
+290,Reserved,Reserved,Reserved
+291,Actual I2T,"The actual value of I2t, displayed as a percentage of set I2T , 1000 indicates 100%",Protection
+292,Reserved,Reserved,Reserved
+293,Reserved,Reserved,Reserved
+294,Reserved,Reserved,Reserved
+295,Reserved,Reserved,Reserved
+296,Reserved,Reserved,Reserved
+297,Reserved,Reserved,Reserved
+298,Reserved,Reserved,Reserved
+299,CAN communication protocol options,"0-MOTECIAN communication, 
+1-CANOPEN communication, 
+Restart drive to apply after any change",Control Parameter
+300,Reserved,Reserved,Reserved
+301,Reserved,Reserved,Reserved
+302,Positive current limit,"Positive current limit  , which is the minimum out of rated current and continuous current, 0 to 300, representing 0% to 300%, and the maximum value shall not exceed motor peak current;",Control Parameter
+303,Negative current limit,"Negative current limit, which is the minimum   out of rated current and continuous current, 0~300 represents 0% to 300%, and the maximum   value shall not exceed motor peak current;",Control Parameter
+304,Positive current limit enable flag,"0-Positive current limit is invalid, 
+1-Positive current limit is valid, 
+All other values are regarded as 0;",Control Parameter
+305,Negative current limit enable flag,"0-Negative current limit is invalid, 
+1-Negative current limit is valid,
+ALl other  values are regarded as 0;",Control Parameter
+306,Positive current limit trigger flag,"0-Forward current limit is not triggered, 
+1-forward current limit triggered;",Control Parameter
+307,Negative current limit trigger flag,"0-Negative current limit is not triggered, 
+1-Negative current limit triggered;",Control Parameter
+308,Motor rotating direction,"Define the direction of rotation of the motor; 0 for one direction, others for apposite direction;",Control Parameter
+309,PVT queue data clearing,Set 1 to clear PVT data,PVT
+310,PVT queue head,PVT queue head,PVT
+311,PVT queue tail,PVT queue tail,PVT
+312,PVT queue  statuss,"PVT queue  statuss£º
+0-Queue is full;
+1-Empty queue£»
+2-Queue is missing data;
+3-Queue is normal;",PVT
+313,PVT cycle time,"PVT cycle time, in ms",PVT
+314,Data alarm limit in the PVT queue,"The minimum number of data limit of PVT queue alarm. When data number in PVT queue is less than this value , an alarm of PVT queue is missing data will be generated.",PVT
+315,PVT operating mode,"0-Data comes from the network, 
+1-Data comes from flash,
+2-Internal simulation",PVT
+316,PVT start/stop,"0-stop, 1-start",PVT
+317,PVT simulation position amplitude high 16 bits ,PVT simulation position amplitude high 16 bits ,PVT
+318,PVT simulation position amplitude low 16 bits,PVT simulation position amplitude low 16 bits,PVT
+319,PVT simulation cycle,"PVT simulation cycle (in one SINE period), in ms",PVT
+320,Internal Flash mode run times,Internal Flash mode run times,PVT
+321,PVT smoothing filter,PVT mode smoothing filter;,PVT
+322,Internal Flash mode time gap between two motions,"Gap time between the 1st motion and the next motion in PVT internal flash mode, 1 unit is 65 microseconds; ",PVT
+323,Absolute encoder mode switching,"0: Incremental mode;
+1: 0 to PMAX (maximum position) mode;
+2: -PMAX/2 to 0 to +PMAX/2 mode;",Control Parameter
+324,Reserved,Reserved,Reserved
+325,Reserved,Reserved,Reserved
+326,Reserved,Reserved,Reserved
+327,Proportional gain scaling factor,"100: Increase proportion gain of internal speed loop and position loop by 100 times;
+10: Increase proportion gain of internal speed loop and position loop by 10 times;
+-10: Reduce proportion gain of internal speed loop and position loop by 10 times;
+-100:Reduce proportion gain of internal speed loop and position loop by 100 times;;
+Other  values: keep original gain unchanged;",Reserved
+328,Integral gain scaling factor,"100: Increase integral gain of internal speed loop and position loop by 100 times;
+10: Increase integral gain of internal speed loop and position loop by 10 times;
+-10: Reduce integral gain of internal speed loop and position loop by 10 times;
+-100:Reduce integral gain of internal speed loop and position loop by 100 times;;
+Other  values: keep original gain unchanged;",Control gain
+329,Gain scaling enable,Set to 9999 to apply gain scaling strategy otherwise not applied.,Control gain
+330,Position setting   Bit32-Bit47,Position setting   Bit32-Bit47,Position mode
+331,Position actual   Bit33-Bit48,Position actual   Bit33-Bit48,Position mode
+332,Absolute encoder home position Bit32-Bit47,Absolute encoder home position Bit32-Bit47,Position mode
+333,Absolute encoder home position Bit16-Bit31,Absolute encoder home position Bit16-Bit31,Position mode
+334,Absolute encoder home position Bit0-Bit15,Absolute encoder home position Bit0-Bit15,Position mode
+335,Reserved,Reserved,Reserved
+336,Reserved,Reserved,Reserved
+337,Reserved,Reserved,Reserved
+338,Reserved,Reserved,Reserved
+339,Reserved,Reserved,Reserved
+340,Reserved,Reserved,Reserved
+341,Reserved,Reserved,Reserved
+342,Reserved,Reserved,Reserved
+343,Reserved,Reserved,Reserved
+344,Reserved,Reserved,Reserved
+345,Reserved,Reserved,Reserved
+346,Reserved,Reserved,Reserved
+347,Reserved,Reserved,Reserved
+348,Define number of encoder pulses per revolution. High 16 bits,"Define number of encoder pulses per turn high 16 bits, together with low 16 bits to form a 32-bit unsigned number
+When both Pr348 and Pr349 are set to zero, number of encoder pulses per revolution of the motor is counted by the motor's own encoder.
+When the Pr348 and Pr349 are not set to zero, number of encoder pulses per revolution of the motor is counted according to the set in software settings.",Control Parameter
+349,Define number of encoder pulses per revolution. Low 16 bits,"Define number of encoder pulses per turn low 16 bits, together with high 16 bits to form a 32-bit unsigned number
+When both Pr348 and Pr349 are set to zero, number of encoder pulses per revolution of the motor is counted by the motor's own encoder.
+When the Pr348 and Pr349 are not set to zero, number of encoder pulses per revolution of the motor is counted according to the   set in software settings.",Control Parameter

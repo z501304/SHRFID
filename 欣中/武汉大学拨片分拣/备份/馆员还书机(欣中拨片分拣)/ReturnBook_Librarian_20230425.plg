@@ -1,0 +1,95 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\阿法迪\武汉大学拨片分拣(欣中)\24小时还书机-馆员还书机(欣中拨片分拣)\ReturnBook_v2_10.uvproj
+Project File Date:  04/25/2023
+
+<h2>Output:</h2>
+compiling main.C...
+main.C - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POSITIVE_DOOR_RUN?EQUIPMENT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?HF_READER
+Program Size: data=127.0 xdata=0 code=4473
+creating hex file from "ReturnBook_Librarian_20230425"...
+"ReturnBook_Librarian_20230425" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling communication.c...
+compiling equipment.c...
+compiling hf_reader.c...
+compiling main.C...
+compiling system_initiate.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POSITIVE_DOOR_RUN?EQUIPMENT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?HF_READER
+Program Size: data=127.0 xdata=0 code=4473
+creating hex file from "ReturnBook_Librarian_20230425"...
+"ReturnBook_Librarian_20230425" - 0 Error(s), 2 Warning(s).
+compiling equipment.c...
+equipment.c(190): warning C315: unknown #directive 'region'
+equipment.c(267): warning C315: unknown #directive 'endregion'
+equipment.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POSITIVE_DOOR_RUN?EQUIPMENT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?HF_READER
+Program Size: data=127.0 xdata=0 code=4473
+creating hex file from "ReturnBook_Librarian_20230425"...
+"ReturnBook_Librarian_20230425" - 0 Error(s), 2 Warning(s).
+compiling equipment.c...
+equipment.c(190): warning C315: unknown #directive 'region'
+equipment.c(267): warning C315: unknown #directive 'endregion'
+equipment.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?POSITIVE_DOOR_RUN?EQUIPMENT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?HF_READER
+Program Size: data=127.0 xdata=0 code=4473
+creating hex file from "ReturnBook_Librarian_20230425"...
+"ReturnBook_Librarian_20230425" - 0 Error(s), 2 Warning(s).
+compiling equipment.c...
+equipment.c(190): warning C315: unknown #directive 'region'
+equipment.c(267): warning C315: unknown #directive 'endregion'
+equipment.c(269): warning C315: unknown #directive 'region'
+equipment.c(297): warning C315: unknown #directive 'endregion'
+equipment.c(299): warning C315: unknown #directive 'region'
+equipment.c(327): warning C315: unknown #directive 'endregion'
+equipment.c(329): warning C315: unknown #directive 'region'
+equipment.c(343): warning C315: unknown #directive 'endregion'
+equipment.c(344): warning C315: unknown #directive 'region'
+equipment.c(555): warning C315: unknown #directive 'endregion'
+equipment.c(556): warning C315: unknown #directive 'region'
+equipment.c(612): warning C315: unknown #directive 'endregion'
+equipment.c(614): warning C315: unknown #directive 'region'
+equipment.c(799): warning C315: unknown #directive 'endregion'
+equipment.c - 0 Error(s), 14 Warning(s).
+compiling equipment.c...
+equipment.c(190): warning C315: unknown #directive 'region'
+equipment.c(267): warning C315: unknown #directive 'endregion'
+equipment.c(269): warning C315: unknown #directive 'region'
+equipment.c(297): warning C315: unknown #directive 'endregion'
+equipment.c(299): warning C315: unknown #directive 'region'
+equipment.c(328): warning C315: unknown #directive 'endregion'
+equipment.c(332): warning C315: unknown #directive 'region'
+equipment.c(346): warning C315: unknown #directive 'endregion'
+equipment.c(348): warning C315: unknown #directive 'region'
+equipment.c(559): warning C315: unknown #directive 'endregion'
+equipment.c(561): warning C315: unknown #directive 'region'
+equipment.c(617): warning C315: unknown #directive 'endregion'
+equipment.c(620): warning C315: unknown #directive 'region'
+equipment.c(806): warning C315: unknown #directive 'endregion'
+equipment.c(809): warning C315: unknown #directive 'region'
+equipment.c(1056): warning C315: unknown #directive 'endregion'
+equipment.c - 0 Error(s), 16 Warning(s).

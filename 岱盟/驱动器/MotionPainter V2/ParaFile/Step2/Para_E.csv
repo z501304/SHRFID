@@ -1,0 +1,520 @@
+Numbering,name,Function Description,Parameter grouping,
+0,Drive type,"101XX£ºTwo-phase intelligent stepper drive
+201XX£ºThree-phase intelligent stepper drive
+301XX£ºCoreless DC servo drive
+401XX£ºDC servo drive
+501XX£ºBeta version AC servo drive",Drive information,
+1,"Drive serial number 
+High bits","High 16 bits of drive serial number, together with low 16 bits to form a 32 bits number, which is the unique identification number of the drive",Drive information,
+2,"Drive serial number
+Low bits","Low 16 bits of drive serial number, together with high 16 bits to form a 32 bits number, which is the unique identification number of the drive",Drive information,
+3,Software version of the drive,"Software version of the drive, e.g.30201, Version 3.02.01",Drive information,
+4,Drive rated voltage,Drive rated voltage,Drive information,
+5,Drive rated current,Drive rated current,Drive information,
+6,ISP download function enabled,"After this function is enabled, you can use the MOTEC program to download the firmware of the software update drive.",Drive information,
+7,ISP download function 32-bit download password high 16 bits,ISP remote download drive firmware verification password,Drive information,
+8,ISP download function 32-bit download password low 16 bits,ISP remote download drive firmware verification password,Drive information,
+9,Drive hardware version number,"Drive hardware version, e.g.30201, Version3.02.01",Drive information,
+10,Reserved,Reserved,Drive information,
+11,Drive address,"Drive address, used for viewing, does not support online modification, address range 0-63",Drive information,
+12,RS232/RS485/USB communication baud rate,"RS232/RS485/USB communication baud rate
+0-9600bps;
+1-19200bps;
+2-38400bps;
+3-57600bps;
+4-115200bps;
+Restart to apply after any modification",Drive information,
+13,CAN communication baud rate,"CAN bus communication baud rate
+0-50kbps;
+1-125kbps;
+2-250kbps;
+3-500kbps;
+4-800kbps;
+5-1Mbps;
+Restart to apply after any modification",Drive information,
+14,CAN master/slave station selection,"This option is only valid in the PLC operating mode, in any other modes it has to be slave:
+0-The drive is used as a CAN master in PLC mode, and can send commands to the rest units on the same CAN network. The format of the command is MOTEC cyclic transmission with MOTEC protocols.
+1-The drive is used as a CAN slave in any mode and can only accept CAN commands. It can receive MOTEC loop data frames, MOTECIAN custom protocol data frames, CANopen data frames in any mode.MOTEC loop data rames and CANopen data frame cannot present simultaneously in one CAN network",Drive information,
+15,Communication options,"0-MOTECIAN communication;
+1-CANopen communication;",Drive information,
+16,CANopen communication mode selection,"CANopen communication mode fast channel selection:
+0-Do not enable MOTEC fast channel, control through CANopen-compliant DS402 protocol
+1-Enable MOTEC fast channel, controlled by MOTEC fast channel",Drive information,
+17,Communication slave station type flag,"Communication slave station type flag under CAN cyclic data frame
+0-Drive used as a slave drive, the data in the data frame including position,speed and I/O status;
+1-Drive used as extended I/O port of the master drive. The data frame only includes the status of I/O.",Drive information,
+18,MOTECIAN checksum method,"MOTECIAN checksum method£º
+0-CRC
+1-XOR",Drive information,
+19,Current DIP switch status,"BIT0~BIT7 indicate SWITCH1~SWITCH8, which only indicates status at the moment of power-on.",Drive information,
+20,CANopen Satrt/Stop,"
+0-Normal CANopen operation
+1-Set the CANopen parameter, Stop receiving and sending SDO and PDO",Drive information,
+21,Reserved,Reserved,Reserved,
+22,motor model,"Indicates motor type 0xABCD, where A represents phase and B represents specific model such as 609, 620, A12, etc.",Motor information,
+23,Motor rated current,Motor's rated current,Motor information,
+24,Motor feedback type,"Motor feedback type:
+0-incremental encoder;
+1-digital Hall;
+2-rotary transformer;
+3-4 line encoder;
+4-Tamachuan 17-bit encoder;
+5-Heidehan EnData2.2 encoder;
+6-Renishaw Biss encoder;
+7-SSI encoder;",Motor information,
+25,Close loop option,"0-no encoder is used;
+1-encoder is used as feedback (close loop. not valid)",Motor information,
+26,"Encoder count per revolution, high bits","High bit of encoder counts per revolution, together with lowe bits it makes a 32 bits   for encoder resolution",Drive information,
+27,"Encoder count per revolution, lowe  bits","Low bit of encoder counts per revolution, together with high bits it makes a 32 bits   for encoder resolution",Drive information,
+28,Encoder inverse feedback selection,"Encoder inverse feedback selection
+0-not enabled;
+1-Enable",Motor information,
+29,Motor Ke value,Motor back electromotive force constant (not valid),Motor information,
+30,Motor resistance value,Motor phase resistance (not valid),Motor information,
+31,Motor inductance,Motor phase inductance (not valid),Motor information,
+32,Encoder alarm enabled,"When function is enabled when drive lost its power, current position will be saved into its flash and can be restored when power is resumed.
+0-Encoder error will not generate an alarm
+1-Encoder error will generates an alarm",Motor information,
+33,Reserved,Reserved,Reserved,
+34,Lost power position save function,"
+0-Function not enable
+1-Function enabled",Motor information,
+35,Lost power position data high bits,Lost power position data high bits,Motor information,
+36,Lost power position data low bits,Lost power position data low bits,Motor information,
+37,Reserved,Reserved,Motor information,
+38,Restore factory settings,"1-Restore factory settings, auto reset to zero, not saved to FLASH",Motor information,
+39,Microstep setting,Microstep setting 200-60000,Motor information,
+40,Analog input as motor temperature,"The function allow an analog signal to be connected to drive as motor temperature 
+0-Function disabled;
+1-Function enabled;",Motor information,
+41,Analog input as motor temperature alarm,Temperature exceed this parameter drive will generate an alarm but motor will keep working,Motor information,
+42,Analog input as motor temperature alert,Temperature exceed this parameter drive will generate an alert and motor will be released,Motor information,
+43,Motor current setting,Motor current setting,Motor information,
+44,Half-current function,"When motor is in static and set time elapsed, the function will half current currentto reduce heating. 1- Function eabaled. 0-Function disabled.",Motor information,
+45,Holding current factor,"Holding current factor. When motor is in static, pencentage of motor rate current.",Motor information,
+46,Half-current delay time,"If half-current is enabled, when motor stopped and set time (this parameter)elcaped, drive will reduce 50% of current.",Motor information,
+47,Half-current reducing step,"When half-current function start working, current will be reduced step by step till 50% current is reached. This paramater defined the current reducing value of each step.",Motor information,
+48,Position error tolerance high 16-bit byte,Position error tolerance high 16-bit byte,Motor information,
+49,Position error tolerance low 16-bit byte,Position error tolerance low 16-bit byte,Motor information,
+50,Reserved,Reserved,Reserved,
+51,Operating mode,"Drive operating mode:
+0-network command mode;
+1-pulse/direction mode;
+2-analog signal mode;",control parameter,
+52,Control mode,"Drive control mode:
+0-position control mode;
+1-Speed control mode",control parameter,
+53,Motor Enable/Disable,"0-Disabled;
+1-Enabled",control parameter,
+54,Encoder count high bits,current encoder value,control parameter,
+55,Encoder current low bits,current encoder value,control parameter,
+56,Encoder count clear,"Write 1 to clear encoder count, then the valued of this register automatically returned to 0",control parameter,
+57,Clear alarm information,"Write 1 to clear alarm, then the value of this register automatically returned to 0",control parameter,
+58,Drive alarm information 1,Current alarm information,control parameter,
+59,Drive alarm information 2,Last alarm information,control parameter,
+60,Alarm handling limit,"This is 16 bits number, if any bit is 1, means motor will not be released if there is alarm (number of bit0",control parameter,
+61,Save parameters to flash,"Write 1 to save current parameters to FLASH, and then the paramter automatically return to 0",control parameter,
+62,Overvoltage alarm time threshold,"If overvoltage time exceeds this time threshold, overcurrent alarm will be generated.",control parameter,
+63,Overcurrent alarm time threshold,"If overcurrent time exceeds this time threshold, overcurrent alarm will be generated.",control parameter,
+64,Power supply voltage,The unit is 0.1V.Current value is current bus voltage ,control parameter,
+65,PLC status,"0-Internal Plc not running
+1-Internal PLC running",control parameter,
+66,PLC serial number high 16 bits,"To enable PLC function, a code is needed from MOTEC based this serial number",control parameter,
+67,PLC serial number lower 16 bits,"To enable PLC function, a code is needed from MOTEC based this serial number",control parameter,
+68,PLC Function Enabled/Disabled.,"5555-Built-in PLC is disabled.
+9999-Built-in PLC is enabled.",control parameter,
+69,Reserved,Reserved,Reserved,
+70,Reserved,Reserved,Reserved,
+71,Reserved,Reserved,Reserved,
+72,Reserved,Reserved,Reserved,
+73,Reserved,Reserved,Reserved,
+74,Reserved,Reserved,Reserved,
+75,Reserved,Reserved,Reserved,
+76,Reserved,Reserved,Reserved,
+77,Reserved,Reserved,Reserved,
+78,Position control start mode,"
+0-Current motion will not stp, start the motion with current speed as starting speed, target position based on the latest control command
+1-Immediately stop current motion and start motion from speed 0",Position control parameter,
+79,Reserved,Reserved,Position control parameter,
+80,Position control motion mode,0-Absolute motion (position calculated based on home)      1-Relative motion(position calculated based on current position),Position control parameter,
+81,Point-to-point motion distance high 16 bits,Point-to-point motion distance high 16 bits,Position control parameter,
+82,Point-to-point motion distance low 16 bits,Point-to-point motion distance low 16 bits,Position control parameter,
+83,Point-to-point motion position set high 16 bits,Point-to-point motion position set high 16 bits. In absolute mode this is equal to motion distance. In relative mode this is equal to current position plus motion distance.,Position control parameter,
+84,Point-to-point motion position set low 16 bits,Point-to-point motion position set low 16 bits. In absolute mode this is equal to motion distance. In relative mode this is equal to current position plus motion distance.,Position control parameter,
+85,Point-to-point motion target position high 16 bits,Target position of current control cycle,Position control parameter,
+86,Point-to-point motion target position low 16 bits,Target position of current control cycle,Position control parameter,
+87,Position mode point-to-point motion maximum speed,Position mode point-to-point motion maximum speed,Position control parameter,
+88,Position mode point-to-point motion acceleration,Position mode point-to-point motion acceleration. Used in speed control mode as well.,Position control parameter,
+89,Position mode point-to-point motion deceleration,Position mode point-to-point motion deceleration. Used in speed control mode as well.,Position control parameter,
+90,Position mode point-to-point motion maximum reverse speed,The maximum speed at which the reverse motion begins when motor receive an command to reverse motion direction.,Position control parameter,
+91,Position mode point-to-point motion reverse deceleration,Position mode point-to-point motion reverse deceleration,Position control parameter,
+92,Motion completion flag,"0-Point to point motion not completed
+1-Point to point motion completed",Position control parameter,
+93,Motion near completion flag,"0-Current position in near completion area
+1-Current position not in near completion area",Position control parameter,
+94,Completion area,Define a area where motion is considered completed.,Position control parameter,
+95,Reserved,Reserved,Position control parameter,
+96,Complete settling time,"When position is in motion completion area and set time(this paramater) elapsed, motion completion flag will be set;",Position control parameter,
+97,Stop deceleration,Deceleration for stop motion,Position control parameter,
+98,Start motion,"Write 1 motor start motion, and this parameter return to 0 automataically",Position control parameter,
+99,Stop motion,"Write 1 motor stop smotion, and this paramete return to 0 automataically",Position control parameter,
+100,Emergency stop,"Write 1 for emergency stop. Motor will stop immediately. After that this parameter automatically return to 0 and automatically disables all motion start signals, including Point-to-point start signal, homing start signal, start jogging signal, analog mode start motion signal, pulse mode start motion signal",Position control parameter,
+101,Clear position,Set 1 to clear current position and return to 0 automatically.,Position control parameter,
+102,Maximum stop speed in point-to-point motion,Maximum stop speed in point-to-point motion,Position control parameter,
+103,Reserved,Reserved,Position control parameter,
+104,Emergency stop mode,"0-Emergency stop, stop immediately;
+1-Emergency stop, and release motor;",Position control parameter,
+105,Reserved,Reserved,Reserved,
+106,Reserved,Reserved,Reserved,
+107,Reserved,Reserved,Reserved,
+108,Target speed value,Target speed value set in speed mode,Speed control parameter,
+109,Speed setting in speed mode,Target speed in current control cycle,Speed control parameter,
+110,Speed arrival flag in speed mode,"0-Target speed not reached
+1-Target speed reached",Speed control parameter,
+111,Actual speed,Current motor speed,Speed control parameter,
+112,Reserved,Reserved,Reserved,
+113,Reserved,Reserved,Reserved,
+114,Reserved,Reserved,Reserved,
+115,Reserved,Reserved,Reserved,
+116,Homing speed,Homing speed. +/- indicates direction.,Zero return parameter,
+117,Acceleration and deceleration for homing,Default value is equal to motion acceleration in position control mode,Zero return parameter,
+118,Reserved,Reserved,Zero return parameter,
+119,Homing offset high 16 bits,Homing offset high 16 bits,Zero return parameter,
+120,Homing offset low l6 bits,Homing offset low l6 bits,Zero return parameter,
+121,Reserved,Reserved,Zero return parameter,
+122,Homing time gap between phases,Homing is a process consists with a few phases. This parameter defined time gap between these phases.,Zero return parameter,
+123,Start homing,Set 1 to start homing and this paramter return to 0 automatically,Zero return parameter,
+124,Stop homing,Set 1 to stop homing and this paramter return to 0 automatically,Zero return parameter,
+125,Homing flag,"0-Homing not executed
+1-Homing executed",Zero return parameter,
+126,Homing succeed flag,"After start homing, the parameter is set to 0 and then set to 1 if homing is completed suceessfully.",Zero return parameter,
+127,Reserved,Reserved,Reserved,
+128,Reserved,Reserved,Reserved,
+129,Reserved,Reserved,Reserved,
+130,Reserved,Reserved,Reserved,
+131,Jog speed,Jog speed,Jog parameter,
+132,Start|stop positive jog,"Start|stop forward jog
+0-Stop positive jog (in forward positive operation);
+1-Start positive jog",Jog parameter,
+133,Start|stop negative jog,"Start|stop negative jog
+0-Stop negative jog (in negativejog operation);
+1-Start negative jog",Jog parameter,
+134,Jog stop mode,"Jog stop mode:
+0-Emergency stop;
+1-Deceleration stop, stop with deceleration",Jog parameter,
+135,Reserved,Reserved,Reserved,
+136,Reserved,Reserved,Reserved,
+137,Pulse mode selection,"Pulse mode selection£º
+0-Orthogonal pulse mode
+1-Pulse direction mode, valid on rising edge
+2-Pulse direction mode, valid falling edge",Pulse mode,
+138,Pulse mode smooth selection,"First-order filtering smoothing coefficient: 0-4095, the greater the value, the higher filtering effect",Pulse mode,
+139,"Current pulse count before filtering, high 16 bits","Indicates the hardware pulse count before filtering, which is used to count the number of input pulses",Pulse mode, 
+140,"Current pulse count before filtering, low 16 bits","Indicates the hardware pulse count before filtering, which is used to count the number of input pulses",Pulse mode,
+141,"Current pulse count after filtering, high 16 bits","Indicates the hardware pulse count after filtering, which is used to count the number of input pulses",Pulse mode,
+142,"Current pulse count after filtering, low 16 bits","Indicates the hardware pulse count after filtering, which is used to count the number of input pulses",Pulse mode,
+143,Clear current pulse count,"The default is 0, write 1 to clear the current pulse, then automatically restore to 0",Pulse mode,
+144,"Pulse mode superimposed pulse number, high 16 bits","The number of pulses that can be superimposed when moving in pulse mode, only one time for one trigger, superimposed speed, acceleration, etc., using the position mode parameters for trajectory planning",Pulse mode,
+145,"Pulse mode superimposed pulse number, low 16 bits","The number of pulses that can be superimposed when moving in pulse mode, only one time for one trigger, superimposed speed, acceleration, etc., using the position mode parameters for trajectory planning",Pulse mode,
+146,Pulse mode maximum superimposed pulse speed,The maximum speed during the pulse process can be superimposed when moving in pulse mode,Pulse mode,
+147,Pulse mode pulse superposition enable,"Default value is 0, write 1 to start overlying, superimpose, and then automatically restore to 0",Pulse mode,
+148,Reserved,Reserved,Reserved,
+149,Reserved,Reserved,Reserved,
+150,Reserved,Reserved,Reserved,
+151,Reserved,Reserved,Reserved,
+152,Analog input filter,"First-order filtering smoothing coefficient: 0-4095, the greater the value the higher filtering effect",Analog mode,
+153,Analog signal dead zone,Any analog below this parmaeter is consider 0,Analog mode,
+154,Analog signal coffset,Analog signal offset,Analog mode,
+155,Analog control mode selection,"0-Analog position mode;
+1-Analog speed mode.",Analog mode,
+156,Analog mode IO mode selection,"0-Analog voltage to control direction;
+1-Analog voltage for speed control,with an input signal for direction control",Analog mode,
+157,Analog mode direction I/O selection,"0-No I/O;
+1-INPUT1 as the control signel for direction;
+2-INPUT2 as the control signel for direction;
+And so on, til the drive's maximum input;",Analog mode,
+158,"Analog mode position mode, high 16 bits",position corresponding to analog siganla,Analog mode,
+159,"Analog mode position mode, low 16 bits",position corresponding to analog siganla,Analog mode,
+160,Anlogy mode maximum speed,Maximum speed in analog mode,Analog mode,
+161,Analog mode positive direction signal level selection,"
+0-Photocoupler OFF for positive direction
+1-Photocoupler ON fot podiyibr direction",Analog mode,
+162,Reserved,Reserved,Reserved,
+163,Reserved,Reserved,Reserved,
+164,Reserved,Reserved,Reserved,
+165,Reserved,Reserved,Reserved,
+166,Reserved,Reserved,Reserved,
+167,Reserved,Reserved,Reserved,
+168,"Soft high limit, high 16 bits","Soft high limit, high 16 bits",Limit function parameter,
+169,"Soft high limit, low 16 bits","Soft high limit, low 16 bits",Limit function parameter,
+170,"Soft low limit, high 16 bits","Soft low limit, high 16 bits",Limit function parameter,
+171,"Soft low limit, low 16 bits","Soft low limit, low 16 bits",Limit function parameter,
+172,Soft high limit activation,"0- Software high limit not activated;
+1- Software high limit activated;",Limit function parameter,
+173,Soft low limit activation,"0- Software low limit not activated;
+1- Software low limit activated;",Limit function parameter,
+174,Current high limit status,"Current high limit status (valid for both soft and hard limits):0-High limit is not triggered;
+1-High limit is triggered",Limit function parameter,
+175,Current low limit status,"Current low limit status (valid for both soft and hard limits):
+0-low limit is not triggered;
+1-low limit is triggered;",Limit function parameter,
+176,Current high soft limit status,"0-Soft high limit is not triggered;
+1-Soft high limit is triggered;",Limit function parameter,
+177,Current low soft limit status,"0-Soft low limit is not triggered;
+1-Soft low limit is triggered;",Limit function parameter,
+178,Current high hardware limit status,"0-Harware high limit is not triggered;
+1-Hardware high limit is triggered;",Limit function parameter,
+179,Current low hardware limit status,"0-Hardware low limit is not triggered;
+1-Hardware low limit is triggered;",Limit function parameter,
+180,Automatic brake enable,"Automatic brake enable control:
+0- Function disabled
+1- Function enabled, ie motor brake and the motor enable are linked and braked will automatically realease when motor receive motor enable command",Brake function parameter,
+181,Brake start delay time,"When the motor is in static, the delay time before brake is on when motor is released, or the delay time to release brake when motor is enabled",Brake function parameter,
+182,Reserved,Reserved,Reserved,
+183,"Position setting value, high 16 bits",Position setting value,Motion monitoring,
+184,"Position setting value, low 16 bits",Position setting value,Motion monitoring,
+185,"Actual position value, high 16 bits",Actual position value,Motion monitoring,
+186,"Actual position value, low 16 bits",Actual position value,Motion monitoring,
+187,Target speed value,Target speed value,Motion monitoring,
+188,Actual speed value,Actual speed value,Motion monitoring,
+189,Position error value,Position error value,Motion monitoring,
+190,Speed error value,Speed error value,Motion monitoring,
+191,Reserved,Reserved,Reserved,
+192,Reserved,Reserved,Reserved,
+193,Reserved,Reserved,Reserved,
+194,Reserved,Reserved,Reserved,
+195,Reserved,Reserved,Reserved,
+196,Reserved,Reserved,Reserved,
+197,Reserved,Reserved,Reserved,
+198,Speed arrival flag,"0-Target speed reached
+1-Target speed not reached",Motion monitoring,
+199,Location arrival sign,"0-Target position not reached
+1-Target position reached",Motion monitoring,
+200,Zero speed threshold,"When the motor speed is less than this value, the motor speed is considered to be 0.",Motion monitoring,
+201,Zero speed flag,"0-Motor speed is 0;
+1-Motor speed is not 0",Motion monitoring,
+202,Reserved,Reserved,Reserved,
+203,Reserved,Reserved,Reserved,
+204,Reserved,Reserved,Reserved,
+205,Reserved,Reserved,Reserved,
+206,Digital input status,"Digital input status:
+Bit0 - the status of input port 1;
+Bit1 - the status of input port 2;
+Bit2 - the status of input port 3;
+Bit3 - the status of input port 4;
+Bit4 - the status of input port 5;
+Bit5 - the status of input port 6;
+Bit6 - the status of input port 7;
+Bit7 - the status of input port 8;
+Note: The number of input ports of each type of drive is not the same, please refer to the selection manual;
+Value of each bit defination:
+0-Optocouple is OFF;
+1-Optocoupler is ON;",IO status monitoring,
+207,Digital output status,"Digital output status:
+Bit0 - the status of output port 1;
+Bit1 - the status of output port 2;
+Bit2 - the status of output port 3;
+Note: The number of output ports of each type is different, please refer to the selection manual;
+Value of each bit defination:
+0-photocouple is off;
+1-optical coupling conduction;
+This parameter can be used to set output port status as well.",IO status monitoring,
+208,Analog input hardware value,Value of the current analog hardware input.,IO status monitoring,
+209,Analog input value after processing,Value of current analog input after processing,IO status monitoring,
+210,Stop motion input,"0-Not defined;
+1-Input 1 is used for stop motion;
+2-Input 2 is used for stop motion;
+And so on, until the input port 8;",Input port function setting,
+211,Emergency stop function,"0-Not defined;
+1-Input 1 is used for emergency stop;
+2-Input 2 is used for emergency stop;
+And so on, until the last input;",Input port function setting,
+212,Home sensor input,"0-Not defined;
+1-Input 1 is used as home sensor input;
+2-Input 2 is used as home sensor input;
+And so on, until the last input;",Input port function setting,
+213,Motor enable,"0-Not defined;
+1-Input 1 is used as motor enable input;
+2-Input 2 is used as motor enable input;
+And so on, until the last input;",Input port function setting,
+214,Clear fault,"0-Not defined;
+1-Input 1 is used as clear fault input;
+2-Input 2 is used as clear fault input;
+And so on, until the last input;",Input port function setting,
+215,Positive limit,"0-Not defined;
+1-Input 1 is used as positive limit input;
+2-Input 2 is used as positive limit input;
+And so on, until the last input;",Input port function setting,
+216,Negative limit,"0-Not defined;
+1-Input 1 is used as negative limit input;
+2-Input 2 is used as negative limit input;
+And so on, until the last input;",Input port function setting,
+217,Positive jog,"0-Not defined;
+1-Input 1 is used as positive jog input;
+2-Input 2 is used as positive jog input;
+And so on, until the last input;",Input port function setting,
+218,Negative jog,"0-Not defined;
+1-Input 1 is used as negative jog input;
+2-Input 2 is used as negative jog input;
+And so on, until the last input;",Input port function setting,
+219,Pulse inhibit,"0-Not defined;
+1-Input 1 is used as pulse inhibit input;
+2-Input 2 is used as pulse inhibit jog input;
+And so on, until the last input;",Input port function setting,
+220,Zero speed clamp,"0-Not defined;
+1-Input 1 is used as zero speed clamp input;
+2-Input 2 is used as zero speed clamp input;
+And so on, until the last input;",Input port function setting,
+221,Start homing,"0-Not defined;
+1-Input 1 is used as start homing input;
+2-Input 2 is used as start homing input;
+And so on, until the last input;",Input port function setting,
+222,Stop motion trigger level,"0-Stop motion when photocoupler is ON;
+1-Stop motion when photocoupler is OFF;",Input port function setting,
+223,Emergency stop trigger level,"0-Emergency stop when photocoupler is ON;
+1-Emergency stop when photocoupler is OFF;",Input port function setting,
+224,Home sensor trigger level,"0-Home sensor triggered when photocoupler is ON;
+1-Home sensor triggered when photocoupler is OFF;",Input port function setting,
+225,Motor enable trigger level,"0-Motor enabled when photocoupler is ON;
+1-Motor enabled when photocoupler is OFF;",Input port function setting,
+226,Clear fault trigger level,"0-Clear fault when photocoupler is ON;
+1-Clear fault triggered when photocoupler is OFF;",Input port function setting,
+227,Positive limit trigger level,"0-Positive limti triggered when photocoupler is ON;
+1-Positive limit triggered when photocoupler is OFF;",Input port function setting,
+228,Negative limit trigger level,"0-Clear fault when photocoupler is ON;
+1-Clear fault triggered when photocoupler is OFF;",Input port function setting,
+229,Positive jog trigger level,"0-Positive jog when photocoupler is ON;
+1-Positive jog when photocoupler is OFF;",Input port function setting,
+230,Negative jog trigger level,"0-Negative jog when photocoupler is ON;
+1-Negative jog when photocoupler is OFF;",Input port function setting,
+231,Pulse inhibit trigger level,"0-Pulse inibit on when photocoupler is ON;
+1-Pulse inhibit on when photocoupler is OFF;",Input port function setting,
+232,Zer speed clamp trigger level,"0-Zero speed clamp when photocoupler is ON;
+1-Zero speed clamp when photocoupler is OFF;",Input port function setting,
+233,Start homing trigger level,"0-Start homing when photocoupler is ON;
+1-Start homing triggered when photocoupler is OFF;",Input port function setting,
+234,Reserved,Reserved,Reserved,
+235,Reserved,Reserved,Reserved,
+236,Reserved,Reserved,Reserved,
+237,Reserved,Reserved,Reserved,
+238,Position reached output,"0-Not defined;
+1-Output No. 1 for position reached output;
+2-Output No. 2 for poistion reached output;
+And so on, until the maximum output of the drive;",Output port function setting,
+239,Speed reached,"0-Not defined;
+1-Output No. 1 for speed reached output;
+2-Output No. 2 for speed reached output;
+And so on, until the maximum output of the drive;",Output port function setting,
+240,Motor enable output,"0-Not defined;
+1-Output No. 1 for motor enable output;
+2-Output No. 2 for motor enable output;
+And so on, until the maximum output of the drive;",Output port function setting,
+241,Fault output,"0-Not defined;
+1-Output No. 1 for drive fault output;
+2-Output No. 2 for drive fault output;
+And so on, until the maximum output of the drive;",Output port function setting,
+242,Brake output,"0-Not defined;
+1-Output No. 1 for bake output;
+2-Output No. 2 for brake output;
+And so on, until the maximum output of the drive;",Output port function setting,
+243,Register 1 status output,"0-Not defined;
+1-for register 1 status output;
+2-for register 2 status output;
+And so on, until the maximum output of the drive;",Output port function setting,
+244,Register 1 Status Output Register Number,Defines the register number of the register 1 status output,Output port function setting,
+245,Register 1 Status Output Register Value,"Compare with the value of the current register 1, output port is set ON when values are equal.",Output port function setting,
+246,Register 2 Status Output Register Number,Defines the register number of the register 2 status output,Output port function setting,
+247,Register 2 Status Output Register Number,"Compare with the value of the current register 2, output port is set ON when values are equal.",Output port function setting,
+248,Register 2 Status Output Register Value,"Compared with the value of the current register 2, the output port is turned ON when the values are equal.",Output port function setting,
+249,Position arrival output level,"0-Low level indicates position arrived;
+1-High level indicates position arrived;",Output port function setting,
+250,Speed arrival output level,"0-Low level indicates speed reached;
+1-High level indicates speed reached;",Output port function setting,
+251,Motor enable output function output level,"0-Low level indicates motor is enabled;
+1-High level indicates motor is enabled;",Output port function setting,
+252,Fault output function output level,"0-Low level indicates fault;
+1-High level indicates fault;",Output port function setting,
+253,Brake output function output level,"0-Low level indicates brake ON;
+1-High level indicates brake ON;",Output port function setting,
+254,Register 1 Status Output Port Output Level,"0-Low level indicates that status of register 1 is equal to set value;
+1-High level indicates that status of register 1 is equal to set value;",Output port function setting,
+255,Register 2 Status Output Port Output Level,"0-Low level indicates that status of register 2 is equal to set value;
+1-High level indicates that status of register 2 is equal to set value;",Output port function setting,
+256,Reserved,Reserved,Reserved,
+257,Reserved,Reserved,Reserved,
+258,Reserved,Reserved,Reserved,
+259,"CAN bus retry times on error. When set times reached, retry will stop. Valid when retry is enabled.",CAN bus retry times on error,Master station extended function parameters,
+260,CAN bus retransmissions times remain,Current remained CAN Bus retry times. The value automatically restore to set value and decrease 1 after any retry.,Master station extended function parameters,
+261,Retry option after transmission fail,"0-No Retry;
+1-Retry;",Master station extended function parameters,
+262,Command retransmission times for CAN Bus master sataion,"Command retransmission times for CAN Bus master sataion. If retransmission times is reached, slave station will be considered off-line. Set to 0 results retransmission without limit.",Master station extended function parameters,
+263,CAN communication timeout,"After master station sends out a command, timing will start. If the slave station fail to respond after the timeout period, the communication is considered failed.",Master station extended function parameters,
+264,PDO data frame time interval,"If there are multiple slave stations, the time interval is the gap between each communication between master and slave. When it is set to 0, communication for the next slave station will start immediately after receiving response from the previous slave station.",Master station extended function parameters,
+265,CAN communication error limit,"The max number of error communication of slave station in PLC mode. After the number is reached, the slave station is considered to be offline. This parameter is valid when the number of retransmissions is zero.",Master station extended function parameters,
+266,PDO refresh time,"The time interval of each communication cycle, after all the slaves have refreshed, timing starts, and the timing ends when next communication cycle starts.",Master station extended function parameters,
+267,Number of extended slaves,Number of slaves per communication cycle in MOTEC refresh mode,Master station extended function parameters,
+268,The address of the first extended slave,"The address of the first slave station, shall be unique and shall not be the same as the master. If the value is 0 or same as the address of the master station, communicatio cannot be set up..",Master station extended function parameters,
+269,The address of the second extended slave,"The address of the second slave station, shall be unique and shall not be the same as the master. If the value is 0 or same as the address of the master station, communicatio cannot be set up..",Master station extended function parameters,
+270,The address of the third extended slave,"The address of the third slave station, shall be unique and shall not be the same as the master. If the value is 0 or same as the address of the master station, communicatio cannot be set up..",Master station extended function parameters,
+271,The address of the four extended slave,"The address of the fouth slave station, shall be unique and shall not be the same as the master. If the value is 0 or same as the address of the master station, communicatio cannot be set up..",Master station extended function parameters,
+272,Type of the first extended slave,"The type of the first slave station:
+0- The slave station is a drive slave station. The content data frame under the MOTEC protocol is speed,position, and the status of I/O;
+1- The slave station is an I/O slave station, and the content in data frame under the MOTEC protocol is the status of the slave station I/O;",Master station extended function parameters,
+273,Type of the second extended slave,"The type of the second slave station:
+0- The slave station is a drive slave station. The content data frame under the MOTEC protocol is speed,position, and the status of I/O;
+1- The slave station is an I/O slave station, and the content in data frame under the MOTEC protocol is the status of the slave station I/O;",Master station extended function parameters,
+274,Type of the third extended slave,"The type of the third slave station:
+0- The slave station is a drive slave station. The content data frame under the MOTEC protocol is speed,position, and the status of I/O;
+1- The slave station is an I/O slave station, and the content in data frame under the MOTEC protocol is the status of the slave station I/O;",Master station extended function parameters,
+275,Type of the four extended slave,"The type of the fouth slave station:
+0- The slave station is a drive slave station. The content data frame under the MOTEC protocol is speed,position, and the status of I/O;
+1- The slave station is an I/O slave station, and the content in data frame under the MOTEC protocol is the status of the slave station I/O;",Master station extended function parameters,
+276,The status of the first extended slave,1- Slave station online.Reply received from the slave station. 0- Slave station is offline. ie communication error times reaached limits.Value of this parameter can be set to the address of  Y relay or R relay,Master station extended function parameters,
+277,The status of the second extended slave,1- Slave station online.Reply received from the slave station. 0- Slave station is offline. ie communication error times reaached limits.Value of this parameter can be set to the address of  Y relay or R relay,Master station extended function parameters,
+278,The status of the third extended slave,1- Slave station online.Reply received from the slave station. 0- Slave station is offline. ie communication error times reaached limits.Value of this parameter can be set to the address of  Y relay or R relay,Master station extended function parameters,
+279,The status of the four extended slave,1- Slave station online.Reply received from the slave station. 0- Slave station is offline. ie communication error times reaached limits.Value of this parameter can be set to the address of  Y relay or R relay,Master station extended function parameters,
+280,The first extended slave succeed flag,"After the first slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+281,The second extended slave succeed flag,"After the second slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+282,The third extended slave succeed flag,"After the third slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+283,The four extended slave succeed flag,"After the fourth slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+284,The first extended slave failed flag ,"After the first slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+285,The second extended slave failed flag,"After the second slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+286,The third extended slave failed flag,"After the third slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+287,The four extended slave failed flag,"After the fourth slave send out a data frame, the status is set to 0. After data is received, the status is set to 1, and the value can be set to the address of Y relay or the address of R relay.",Master station extended function parameters,
+288,Reserved,Reserved for oscilloscope functions,Reserved,
+289,Reserved,Reserved for oscilloscope functions,Reserved,
+290,Reserved,Reserved for oscilloscope functions,Reserved,
+291,Reserved,Reserved for oscilloscope functions,Reserved,
+292,Reserved,Reserved for oscilloscope functions,Reserved,
+293,Reserved,Reserved for oscilloscope functions,Reserved,
+294,Reserved,Reserved for oscilloscope functions,Reserved,
+295,Reserved,Reserved for oscilloscope functions,Reserved,
+296,Reserved,Reserved for oscilloscope functions,Reserved,
+297,Reserved,Reserved for oscilloscope functions,Reserved,
+298,Reserved,Reserved for oscilloscope functions,Reserved,
+299,Reserved,Reserved for oscilloscope functions,Reserved,
+300,Reserved,Reserved for oscilloscope functions,Reserved,
+301,CANopen object dictionary,2021h index,CANopen object dictionary,
+302,CANopen object dictionary,2022h index,CANopen object dictionary,
+303,CANopen object dictionary,2023h index,CANopen object dictionary,
+304,CANopen object dictionary,2024h index,CANopen object dictionary,
+305,CANopen object dictionary,2025h index,CANopen object dictionary,
+306,CANopen object dictionary,2026h index,CANopen object dictionary,
+307,CANopen object dictionary,2027h index,CANopen object dictionary,
+308,CANopen object dictionary,2028h index,CANopen object dictionary,
+309,CANopen object dictionary,2029h index,CANopen object dictionary,
+310,CANopen object dictionary,202Ah index,CANopen object dictionary,
+311,CANopen object dictionary,202Bh index,CANopen object dictionary,
+312,CANopen object dictionary,202Ch index,CANopen object dictionary,
+313,CANopen object dictionary,202Dh index,CANopen object dictionary,
+314,CANopen object dictionary,202Eh index,CANopen object dictionary,
+315,CANopen object dictionary,202Fh index,CANopen object dictionary,
+316,CANopen object dictionary,2030h index,CANopen object dictionary,
+317,CANopen object dictionary,2031h index,CANopen object dictionary,
+318,CANopen object dictionary,2032h index,CANopen object dictionary,
+319,CANopen object dictionary,2033h index,CANopen object dictionary,
+320,CANopen object dictionary,2034h index,CANopen object dictionary,
+321,CANopen object dictionary,2035h index,CANopen object dictionary,
+322,CANopen object dictionary,2036h index,CANopen object dictionary,
+323,CANopen object dictionary,2037h index,CANopen object dictionary,
+324,CANopen object dictionary,2038h index,CANopen object dictionary,
