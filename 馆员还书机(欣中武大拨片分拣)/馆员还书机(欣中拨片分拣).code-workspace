@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "main.C": "cpp",
+            "EQUIPMENT.C": "cpp"
+        }
+    },
+    "extensions": {}
+}
